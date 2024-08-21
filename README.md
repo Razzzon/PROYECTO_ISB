@@ -6,4 +6,4 @@
 
 #Participantes
 - Rogger Anthony Huaman Gonzales
-![](""INTEGRANTES_IMAGENES/ROGGER.png"")
+![Rogger](""INTEGRANTES_IMAGENES/ROGGER.png"")
