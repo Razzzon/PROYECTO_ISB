@@ -6,4 +6,4 @@
 
 #Participantes
 - [Rogger Anthony Huaman Gonzales](INTEGRANTES_IMAGENES/ROGGER.png)
-- [Alejandro Javier Rosas Gonzalez Zuñiga](INTEGRANTES_IMAGENES/Alejandro.png)
+- ![Alejandro Javier Rosas Gonzalez Zuñiga](INTEGRANTES_IMAGENES/Alejandro.png)
