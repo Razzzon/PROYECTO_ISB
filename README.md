@@ -6,4 +6,4 @@
 
 #Participantes
 - Rogger Anthony Huaman Gonzales
-![Descripción de la imagen]("C:\Users\rogge\OneDrive\Pictures\Screenshots\foto.png")
+![]("C:\Users\rogge\OneDrive\Pictures\Screenshots\foto.png")
