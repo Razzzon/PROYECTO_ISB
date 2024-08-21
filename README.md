@@ -5,4 +5,4 @@
 - [Participantes](#participantes)
 
 #Participantes
-- ![Rogger Anthony Huaman Gonzales](INTEGRANTES_IMAGENES/ROGGER.png)
+- [Rogger Anthony Huaman Gonzales](INTEGRANTES_IMAGENES/ROGGER.png)
