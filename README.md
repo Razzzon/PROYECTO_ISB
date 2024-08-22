@@ -7,7 +7,7 @@
 
 ## Participantes
 - [Rogger Anthony Huaman Gonzales](INTEGRANTES_IMAGENES/ROGGER.jpg) (colaborador) ► rogger.huaman@upch.pe
-- [Alejandro Javier Rosas Gonzalez Zuñiga](INTEGRANTES_IMAGENES/Alejandro.jpg) (colaborador) ► alejandro.rosas@upch.pe
+- [Alejandro Javier Rosas Gonzalez Zuñiga](INTEGRANTES_IMAGENES/alejandro.jpg) (colaborador) ► alejandro.rosas@upch.pe
 - [Hiroshi Julio Kameya Inafuku](INTEGRANTES_IMAGENES/Hiroshi.jpg) (colaborador) ► hiroshi.kameya@upch.pe
 - [David Sebastian Puma Silva](INTEGRANTES_IMAGENES/Deivid.jpg) (colaborador) ► david.puma@upch.pe
 - [Diego Alberto Cuba Monterola](INTEGRANTES_IMAGENES/EvidenciaDiego.jpg) (colaborador) ► diego.cuba@upch.pe
@@ -16,7 +16,7 @@
 
 | Rogger Huaman | Alejandro Rosas | Hiroshi Kameya|
 | :-------: | :-------: | :-------: |
-|![A](INTEGRANTES_IMAGENES/ROGGER.jpg)|![B](INTEGRANTES_IMAGENES/Alejandro.jpg) | ![C](INTEGRANTES_IMAGENES/Hiroshi.jpg)
+|![A](INTEGRANTES_IMAGENES/ROGGER.jpg)|![B](INTEGRANTES_IMAGENES/alejandro.jpg) | ![C](INTEGRANTES_IMAGENES/Hiroshi.jpg)
 
 
 |David Puma| Diego Cuba |
