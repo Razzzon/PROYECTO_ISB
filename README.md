@@ -8,3 +8,4 @@
 - [Rogger Anthony Huaman Gonzales](INTEGRANTES_IMAGENES/ROGGER.png)
 - [Alejandro Javier Rosas Gonzalez Zuñiga](INTEGRANTES_IMAGENES/Alejandro.png)
 - [Hiroshi Julio Kameya Inafuku](INTEGRANTES_IMAGENES/Hiroshi.jpg)
+- [David Sebastián Puma Silva](INTEGRANTES_IMAGENES/Deivid.png)
