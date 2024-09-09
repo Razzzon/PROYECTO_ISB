@@ -1,4 +1,4 @@
-# Desarrollar o mejorar un algoritmo capaz de diferenciar entre movimientos rutinarios, como rascarse el pecho o cepillarse los dientes, y las arritmias cardíacas 
+# Desarrollar o mejorar un algoritmo capaz de diferenciar entre movimientos rutinarios, como rascarse el pecho o cepillarse los dientes, y las arritmias cardíacas
 
 ## Introducción
 Actualmente para el diagnóstico de enfermedades cardiacas y/o arritmias se hacen uso de diferentes dispositivos. Entre los más reconocidos se encuentran ECG (electrocardiograma) [1], Holters [2], Ecocardiograma [3],Tomografía Computarizada [4], entre otros.
@@ -17,87 +17,104 @@ Este es un dispositivo comercial multifuncional para el monitoreo en casa. Se ba
 
 ![Fig. 1 Dispositivo BeamO](Imagenes/beamo.png)
 <center>
-[Fig. 1 Dispositivo BeamO]
+Fig. 1 Dispositivo BeamO [7]
 </center>
 
 ### **Apple Watch**  
 Este es un dispositivo comercial que consta de un sensor de ECG de una derivación, lo que permite un monitoreo continuo. Además, este dispositivo presenta algoritmos que correlacionan los datos obtenidos con otros sensores como acelerómetro y giroscopio, de modo que se puedan distinguir las variaciones normales causadas por las actividades cotidianas y posibles patologías cardíacas. [8]
 
-
 ![Fig. 2 Dispositivo Apple Watch](Imagenes/reloj.jpg) 
 <center>
-[Fig. 2 Dispositivo Apple Watch]
+Fig. 2 Dispositivo Apple Watch [8]
+</center>
+
+### **Wearable Device - US9955887B2** 
+La patente US9955887B2 consiste en un dispositivo que monitorea la actividad cardiaca de manera portátil, está diseñado de tal forma que minimiza las interferencias por artefactos de movimiento. El diseño del dispositivo, junto a los electrodos flexibles le permite mayor comodidad para el usuario, además, integra un acelerómetro para identificar movimientos, estos datos se procesan utilizando algoritmos y se comparan con el ECG generado, mediante sus respectivos espectros de frecuencia. De este modo, distingue si el ECG generado en ese intervalo de tiempo corresponde a una actividad cardiaca anormal.[9]
+
+![imagen_patente](Imagenes/patente.png)
+<center>
+Fig. 3 Wearable devide [9]
 </center>
 
 ## Estadísticas
 
-Al usar los ECG, estos dispositivos usualmente tiene un software como herramienta para que ayude a detectar anomalías en los trazos del ECG. Sin embargo, estos software no logran ser fiables por los error que llega a cometer, en un estudio se vio que el software malinterpreta el infarto de miocardio (STEMI) con condiciones como el bloqueo de rama derecha, hipertrofia ventricular y el patrón de tipo Brugada. Esto se debe a la incapacidad de interpretar correctamente los complejos QRS y las ondas ST [7R]. Entonces, existe cierto antecedente que nos indica ciertas falencias en estos dispositivos, y en particular, al momento de interpretar las bioseñales. Esta falencia no sólo se limita a confundir una enfermedad por otra, sino que puede llegar al punto de notificar una enfermedad cuando el paciente no la posee.
+Al usar los ECG, estos dispositivos usualmente tiene un software como herramienta para que ayude a detectar anomalías en los trazos del ECG. Sin embargo, estos software no logran ser fiables por los error que llega a cometer, en un estudio se vio que el software malinterpreta el infarto de miocardio (STEMI) con condiciones como el bloqueo de rama derecha, hipertrofia ventricular y el patrón de tipo Brugada. Esto se debe a la incapacidad de interpretar correctamente los complejos QRS y las ondas ST [10]. Entonces, existe cierto antecedente que nos indica ciertas falencias en estos dispositivos, y en particular, al momento de interpretar las bioseñales. Esta falencia no sólo se limita a confundir una enfermedad por otra, sino que puede llegar al punto de notificar una enfermedad cuando el paciente no la posee.
 
-### **Evaluation of atrial fibrillation using wearable device signals and home blood pressure data in the Michigan Predictive Activity & Clinical Trajectories in Health (MIPACT) Study: A Subgroup Analysis (MIPACT-AFib) [8A]**
 
-Con el alza de los dispositivos wearables empezó a surgir evidencia de que los dispositivos wearables con capacidades de detección de arritmias generan en ocasiones falsos positivos. Este estudio buscó evaluar la detección de fibrilación atrial (AF) de dispositivos wearables, y contó con inicialmente 6765 participantes adultos. Se evaluó el desempeño de un modelo de Apple Watch con la capacidad de realizar ECG vía un aplicativo, el OmronBP entre otros. De este total se seleccionaron finalmente 2615. De estos hubo 86 notificados de irregularidades en el ritmo cardíaco, de los cuales 76 pudieron ser evaluados en su totalidad. Solamente 5 fueron confirmados como fibrilación auricular, dando como resultado que alrededor del **93% de alarmas de ritmo cardiaco irregular no correspondían a arritmias.**
+### **Evaluation of atrial fibrillation using wearable device signals and home blood pressure data in the Michigan Predictive Activity & Clinical Trajectories in Health (MIPACT) Study: A Subgroup Analysis (MIPACT-AFib) [11]**
+
+Con el alza de los dispositivos wearables empezó a surgir evidencia de que los dispositivos wearables con capacidades de detección de arritmias generan en ocasiones falsos positivos. Este estudio buscó evaluar la detección de fibrilación atrial (AF) de dispositivos wearables, y contó con inicialmente 6765 participantes adultos. Se evaluó el desempeño de un modelo de Apple Watch con la capacidad de realizar ECG vía un aplicativo, el OmronBP entre otros. De este total se seleccionaron finalmente 2615. De estos hubo 86 notificados de irregularidades en el ritmo cardíaco, de los cuales 76 pudieron ser evaluados en su totalidad. Solamente 5 fueron confirmados como fibrilación auricular, dando como resultado que alrededor del **93% de alarmas de ritmo cardiaco irregular no correspondían a arritmias**.
+
 
 ![Diagrama de flujo de selección de participantes[8A]
 ](Imagenes/diagrama_flujo.png) 
 <center>
-Diagrama de flujo de selección de participantes[8A]
-</center>
+Fig. 4 Diagrama de flujo de selección de participantes [11]
+</center>  
+  
 
-
-\
 Estos falsos positivos no solo implican un error en la lectura e interpretación de datos por parte de los dispositivos, sino que también en las personas. El mismo estudio reporta que alrededor del 33% de participantes sufrió de ansiedad media-moderada, por lo que también este problema representa una carga mental considerable para el paciente. 
 
 
-### **False Atrial Fibrillation Alerts from Smartwatches are Associated with Decreased Perceived Physical Well-being and Confidence in Chronic Symptoms Management [9A]**
+### **False Atrial Fibrillation Alerts from Smartwatches are Associated with Decreased Perceived Physical Well-being and Confidence in Chronic Symptoms Management [12]**
 
 Este estudio basó su diseño en el ensayo clínico Pulsewatch (NCT03761394) para su realización. Hoy en día existen multitud de wearables en el ámbito cardiaco diseñados para su uso en la muñeca que han sido aprobados por la FDA. Los dispositivos comerciales más populares, como lo son los smartwatches de Apple, Samsung y Fitbit, se basan en el uso de algoritmos electrocardiográficos y pletismográficos de pulso. Estos algoritmos son capaces de detectar irregularidades en el ritmo. No obstante, existe evidencia de que estos dispositivos no son infalibles. Se hace referencia al estudio realizado por Apple, Apple Heart Study, donde de los 450 participantes que recibieron notificaciones en este estudio, sólo 34% fueron diagnosticados finalmente con AF, dejando un total de 66% falso positivos.
 
 Respecto a su metodología, y como se mencionó anteriormente, se basó en el ensayo Pulsewatch (NCT03761394). Se tuvieron dos grupos, los cuales fueron evaluados durante 14 días:
 
+
 * Grupo control: Usaron un monitor de parche ECG
 * Grupo de testeo: Usaron el sistema Pulsewatch (sistema basado en un smartwatch y smartphone con sistema operativo Android) capaz de detectar arritmias + un monitor de parche ECG
 
-El sensor del smartwatch estaba programado para la lectura cada 10 minutos. En caso de detectarán 1.5 minutos de AF, se enviaba una notificación vía smartwatch de “quedarse quieto” por 1 minuto para mayor análisis, y en caso se siga detectando se enviaba la notificación de “anormalidad”.
-
-![imagen_diagrama_circulos](Imagenes/esquema.png)<center>
-Alertas del smartwatch[9A]
-</center>
-
 El sensor del smartwatch estaba programado para la lectura cada 10 minutos. En caso de detectarán 1.5 minutos de AF, se enviaba una notificación vía smartwatch de “quedarse quieto” por 1 minuto para mayor análisis, y en caso se siga detectando se enviaba la notificación de “anormalidad”. Si estas no coincidían con la lectura del monitor ECG se consideraban como falsos positivos.
 
-De los 85 participantes que recibieron el sistema Pulsewatch, 15 recibieron alertas de AF, de las cuales **67% (10) resultaron falsos positivos**. En este grupo que recibió falsos positivos, algunos pacientes llegaron a recibir hasta 13 alertas falsas, llegando a un total de 35 alertas falsas en todo el grupo de falsos positivos.
+![imagen_diagrama_circulos](Imagenes/esquema.png)<center>
+Fig. 5 Alertas del smartwatch [12]
+</center>
 
-![imagen_grafica_barras](Imagenes/barras.png)<center>
-Distribución de las alertas falsas en los 10 participantes[9A]
+De los 85 participantes que recibieron el sistema Pulsewatch, 15 recibieron alertas de AF, de las cuales **67% (10) resultaron falsos positivos**. En este grupo que recibió falsos positivos, algunos pacientes llegaron a recibir hasta 13 alertas falsas, llegando a un total de **35 alertas falsas** en todo el grupo de falsos positivos.
+
+![imagen_grafica_barras](Imagenes/barras.png)
+<center>
+Fig. 6 Distribución de las alertas falsas en los 10 participantes [12]
 </center>
 
 Se menciona de igual manera que uno de los principales motivos de estas notificaciones erróneas se debe a **ruidos o interferencias**, seguido de arritmias menores que no representan un peligro para la persona.
 
 ![imagen_grafica_hbarras](Imagenes/hbarras.png)<center>
-Principales causas de las alertas falsas[9A]
+Fig. 7 Principales causas de las alertas falsas [12]
 </center>
 
 ## Problemática detectada
 
-Carencia de softwares especializados para dispositivos cardiacos wearables que permitan distinguir las diferencias entre actividades rutinarias con patologías a nivel de bioseñal.
+De acuerdo a lo expuesto anteriormente, se tiene que existe una serie de problemas en los dispositivos wearables ECG, como la precisión, lo cual se puede traducir en resultados como falsos positivos o falsos negativos. Sin embargo, son los artefactos el mayor problema al momento de realizar el electrocardiograma de forma ambulatoria [14], puesto que son los responsables de alterar tanto parcial como totalmente el trazado ECG, lo que complica su interpretación. Si se realiza enfoque a la mayor fuente de artefactos en un ECG ambulatorio, este resulta provenir de artefactos por movimiento (MA) [14], del mismo modo que la reducción de los artefactos de movimiento es uno de los mayores problemas para el monitoreo wearable de ECG [13].
+
+Por ejemplo, un tipo de artefacto de movimiento es por temblor o tensión muscular, lo cual puede ser ocasionado si el paciente tiene frío o si está tiritando; sin embargo, también puede suceder si la persona se apoya con sus brazos [15], si presenta fiebre, hipotermia o compresiones torácicas como por reanimaciones cardiopulmonares [16]. 
+Asimismo, hay movimientos del paciente rutinarios que alteran el trazado del ECG, como lo es el cepillado de dientes, el cual fue conocido como “toothbrush tachycardia” y generó mucho interés en investigación [5] y rascado en la zona del pecho.
+
+De todo lo anterior, se logró definir la siguiente problemática:
+
+*Carencia de softwares especializados para dispositivos cardiacos wearables que permitan distinguir las diferencias entre actividades rutinarias, como rascarse el pecho y cepillarse los dientes con patologías a nivel de bioseñal*
 
 ## Bases de datos
 
-El objetivo es lograr desarrollar o mejorar un algoritmo que sea capaz de  diferenciar los movimientos rutinarios, como rascarse el pecho y/o cepillarse los dientes respecto a las arritmias cardiacas .
+El objetivo es lograr desarrollar o mejorar un algoritmo que sea capaz de  diferenciar los movimientos rutinarios, como rascarse el pecho y/o cepillarse los dientes respecto a las arritmias cardiacas.
 
 Para ello, contamos con las siguientes bases de datos:
 
 
-- ### A large scale 12-lead electrocardiogram database for arrhythmia study[R1]
+
+- ### A large scale 12-lead electrocardiogram database for arrhythmia study [17]
   Versión: 1.0.0 (physionet.org).
   
   Esta base de datos proporciona ECG de personas con arritmias cardíacas, junto con su diagnóstico respectivo.
 
 - ### Base de datos de personas sanas con ECG (nosotros), realizando movimientos cotidianos
 
-  En esta base de datos se recopilan ECG de personas sanas realizando ciertas actividades rutinarias, con el propósito de ampliar la base de datos y tener una referencia más extensa.
-  
+En esta base de datos se recopilan ECG de personas sanas realizando ciertas actividades rutinarias, con el propósito de ampliar la base de datos y tener una referencia más extensa.
+
 El propósito de este análisis es comparar los trazados ECG de personas con arritmias cardíacas y los trazados en personas sanas con los artefactos producidos por movimientos cotidianos. De esta manera, se busca identificar qué movimientos rutinarios pueden ser confundidos con una arritmia.
+
 
 
 ## Propuesta frente a la problemática
@@ -105,7 +122,7 @@ El propósito de este análisis es comparar los trazados ECG de personas con arr
 Entrenar un modelo de Machine Learning para diferenciar entre un trazado de ECG afectado por un movimiento rutinario y un trazado de ECG con una arritmia.
 
 ## Bibliografía
-    CHECAR ESTO
+
 [1] Biblioteca Nacional de Medicina de EE. UU., "Electrocardiograma," MedlinePlus, [en línea]. Disponible en: https://medlineplus.gov/spanish/pruebas-de-laboratorio/electrocardiograma/. [Accedido: 06-sep-2024].
 
 [2] Biblioteca Nacional de Medicina de EE. UU., "Monitor Holter (24 horas)," MedlinePlus, [en línea]. Disponible en: https://medlineplus.gov/spanish/ency/article/003877.htm. [Accedido: 06-sep-2024].
@@ -122,10 +139,20 @@ Entrenar un modelo de Machine Learning para diferenciar entre un trazado de ECG 
 
 [8] “Apple Presenta El Apple watch series 8 y el Nuevo Apple watch se,” Apple Newsroom (España). [En línea]. Disponible en: https://www.apple.com/es/newsroom/2022/09/apple-reveals-apple-watch-series-8-and-the-new-apple-watch-se/ . [Accedido: 06-sep-2024].
 
-[7R]L. Littmann, "Common ECG interpretation software mistakes. Part I: False reporting of myocardial infarction," Journal of Electrocardiology, vol. 81, pp. 32-35, 2023. [Online]. Available: https://doi.org/10.1016/j.jelectrocard.2023.07.011.
+[9] U.S. Patent 9,955,887 B2, "Wearable physiological monitoring device," May 1, 2018. [Online]. Available: https://patents.google.com/patent/US9955887B2/en
 
-[8A] A. Pastapur, N. A. Pescatore, N. Shah, S. Kheterpal, B. K. Nallamothu, and J. R. Golbus, “Evaluation of atrial fibrillation using wearable device signals and home blood pressure data in the Michigan Predictive Activity & Clinical Trajectories in Health (MIPACT) Study: A Subgroup Analysis (MIPACT-AFib),” Frontiers in Cardiovascular Medicine, vol. 10, Dec. 2023, doi: 10.3389/fcvm.2023.1243574.
+[10] L. Littmann, "Common ECG interpretation software mistakes. Part I: False reporting of myocardial infarction," Journal of Electrocardiology, vol. 81, pp. 32-35, 2023. [Online]. Available: https://doi.org/10.1016/j.jelectrocard.2023.07.011.
 
-[9A] K.-V. Tran et al., “False Atrial Fibrillation Alerts from Smartwatches are Associated with Decreased Perceived Physical Well-being and Confidence in Chronic Symptoms Management,” Cardiology and Cardiovascular Medicine, vol. 07, no. 02, Jan. 2023, doi: 10.26502/fccm.92920314. 
+[11] A. Pastapur, N. A. Pescatore, N. Shah, S. Kheterpal, B. K. Nallamothu, and J. R. Golbus, “Evaluation of atrial fibrillation using wearable device signals and home blood pressure data in the Michigan Predictive Activity & Clinical Trajectories in Health (MIPACT) Study: A Subgroup Analysis (MIPACT-AFib),” Frontiers in Cardiovascular Medicine, vol. 10, Dec. 2023, doi: 10.3389/fcvm.2023.1243574. 
 
-[R1]J. Zheng, H. Guo, y H. Chu, "A large scale 12-lead electrocardiogram database for arrhythmia study (version 1.0.0)," PhysioNet, 2022. [En línea]. Disponible en: https://doi.org/10.13026/wgex-er52.  [Accedido: 06-sep-2024]. 
+[12] K.-V. Tran et al., “False Atrial Fibrillation Alerts from Smartwatches are Associated with Decreased Perceived Physical Well-being and Confidence in Chronic Symptoms Management,” Cardiology and Cardiovascular Medicine, vol. 07, no. 02, Jan. 2023, doi: 10.26502/fccm.92920314. 
+
+[13] X. An, Y. Liu, Y. Zhao, S. Lu, G. K. Stylios, y Q. Liu, “Adaptive Motion Artifact Reduction in Wearable ECG Measurements Using Impedance Pneumography Signal”, Sensors (Basel), vol. 22, núm. 15, p. 5493, jul. 2022, doi: 10.3390/s22155493. Disponible en: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9332869/. [Consultado: el 8 de septiembre de 2024]
+
+[14] C. R. Seisdedos, “Análisis del ECG en monitorización ambulatoria para el diagnóstico cardíaco y la predicción de muerte cardíaca súbita”, nov. 2008.
+
+[15] T. Bouthillet, “Types of ECG Artifacts | Understanding Interference”, ACLS Medical Training, el 27 de agosto de 2024. Disponible en: https://www.aclsmedicaltraining.com/blog/guide-to-understanding-ecg-artifact/. [Consultado: el 8 de septiembre de 2024]
+
+[16] E. Burns, R. Buttner, y E. B. and R. Buttner, “ECG Motion Artefacts”, Life in the Fast Lane • LITFL, el 1 de agosto de 2018. Disponible en: https://litfl.com/ecg-motion-artefacts-ecg-library/. [Consultado: el 8 de septiembre de 2024]
+
+[17] J. Zheng, H. Guo, y H. Chu, "A large scale 12-lead electrocardiogram database for arrhythmia study (version 1.0.0)," PhysioNet, 2022. [En línea]. Disponible en: https://doi.org/10.13026/wgex-er52.  [Accedido: 06-sep-2024].
