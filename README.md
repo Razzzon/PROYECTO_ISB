@@ -9,22 +9,22 @@
 https://www.canva.com/design/DAGP0LxzG-8/GWDhETQnuqnMppvaMXWDpw/edit?utm_content=DAGP0LxzG-8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
 
 ## Participantes
-- [Rogger Anthony Huaman Gonzales](INTEGRANTES_IMAGENES/ROGGER.jpg) (colaborador) ► rogger.huaman@upch.pe
-- [Alejandro Javier Rosas Gonzalez Zuñiga](INTEGRANTES_IMAGENES/alejandro.jpg) (colaborador) ► alejandro.rosas@upch.pe
-- [Hiroshi Julio Kameya Inafuku](INTEGRANTES_IMAGENES/Hiroshi.jpg) (colaborador) ► hiroshi.kameya@upch.pe
-- [David Sebastian Puma Silva](INTEGRANTES_IMAGENES/Deivid.jpg) (colaborador) ► david.puma@upch.pe
-- [Diego Alberto Cuba Monterola](INTEGRANTES_IMAGENES/EvidenciaDiego.jpg) (colaborador) ► diego.cuba@upch.pe
+- [Rogger Anthony Huaman Gonzales](Otros/INTEGRANTES_IMAGENES/ROGGER.jpg) (colaborador) ► rogger.huaman@upch.pe
+- [Alejandro Javier Rosas Gonzalez Zuñiga](Otros/INTEGRANTES_IMAGENES/alejandro.jpg) (colaborador) ► alejandro.rosas@upch.pe
+- [Hiroshi Julio Kameya Inafuku](Otros/INTEGRANTES_IMAGENES/Hiroshi.jpg) (colaborador) ► hiroshi.kameya@upch.pe
+- [David Sebastian Puma Silva](Otros/INTEGRANTES_IMAGENES/Deivid.jpg) (colaborador) ► david.puma@upch.pe
+- [Diego Alberto Cuba Monterola](Otros/INTEGRANTES_IMAGENES/EvidenciaDiego.jpg) (colaborador) ► diego.cuba@upch.pe
 
 <center>
 
 | Rogger Huaman | Alejandro Rosas | Hiroshi Kameya|
 | :-------: | :-------: | :-------: |
-|![A](INTEGRANTES_IMAGENES/ROGGER.jpg)|![B](INTEGRANTES_IMAGENES/alejandro.jpg) | ![C](INTEGRANTES_IMAGENES/Hiroshi.jpg)
+|![A](Otros/INTEGRANTES_IMAGENES/ROGGER.jpg)|![B](Otros/INTEGRANTES_IMAGENES/alejandro.jpg) | ![C](Otros/INTEGRANTES_IMAGENES/Hiroshi.jpg)
 
 
 |David Puma| Diego Cuba |
 |:-------: | :-------:|
-|![D](INTEGRANTES_IMAGENES/Deivid.jpg) | ![E](INTEGRANTES_IMAGENES/EvidenciaDiego.jpg)|
+|![D](Otros/INTEGRANTES_IMAGENES/Deivid.jpg) | ![E](Otros/INTEGRANTES_IMAGENES/EvidenciaDiego.jpg)|
 
 </center>
 

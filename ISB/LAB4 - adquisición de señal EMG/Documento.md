@@ -7,6 +7,7 @@
 * [Materiales y objetivos usados](#materiales-y-equipos-usados)
 * [Procedimiento](#procedimiento)
 * [Resultados](#resultados)
+* [Conclusiones](#conclusiones)
 * [Referencias bibliográficas](#referencias-bibliográficas)
 * [Anexos](#anexos)
   
@@ -99,9 +100,19 @@ Ambas tècnicas, ademàs de diferenciarse por la invasividad, se diferencian en 
 * Músculo a analizar: Bíceps
 * Movimiento muscular: Flexión
 
+#### Información adicional
+En esta prueba, se evaluó las señales de reposo y contracción del bíceps, teniendo la conexión a tierra en el codo. Se realizó el movimiento de flexión del codo, lo que resulta en la activación del bíceps. Nos basamos en un estudio de Kleiber donde se menciona que este músculo se activa durante contracciones concéntricas como isométricas [11]. Los estudios de electromiografía realizados demuestran que a medida que aumenta el ángulo de flexión del codo, existe un incremento en la activación del músculo hasta llegar al máximo cuando el ángulo es de 90° [11]. Además, se demostró que el bíceps mantiene un nivel constante de activación independientemente de la posición neutra, supina o prona [11]. 
+
 #### Tabla con gráficas de la señal adquirida
 ![tabla_bicep1](imagenes/tabla_bicep.jpg)
 ![tabla_bicep2](imagenes/tabla_bicep2.jpg)
+
+#### Video de la prueba
+<video width="320" height="240" controls>
+  <source src="Videos/video_moviemiento/Hiroshi/1.mp4" type="video/mp4">
+</video>
+
+
 ---
 ### Prueba 2:
 #### Información sobre la prueba:
@@ -109,7 +120,12 @@ Ambas tècnicas, ademàs de diferenciarse por la invasividad, se diferencian en 
 * Movimiento muscular: Hiperextensión
 
 #### Tabla con gráficas de la señal adquirida
-![tabla_bicep](imagenes/tabla_triceps.jpg)
+![tabla_tricep](imagenes/tabla_triceps.jpg)
+#### Video de la prueba
+<video width="320" height="240" controls>
+  <source src="Videos/video_moviemiento/Puma tricep/1t.mp4" type="video/mp4">
+</video>
+
 ---
 ### Prueba 3:
 #### Información sobre la prueba:
@@ -118,7 +134,25 @@ Ambas tècnicas, ademàs de diferenciarse por la invasividad, se diferencian en 
 
 #### Tabla con gráficas de la señal adquirida
 ![tabla_bicep](imagenes/tabla_gastrocnemio.jpg)
+
+
+![comparacion](Imagenes/comparacion_espectros.jpg)
+
+#### Video de la prueba
+<video width="320" height="240" controls>
+  <source src="Videos/video_moviemiento/Puma - gemelos/1g.mp4" type="video/mp4">
+</video>
+
 ---
+
+## Conclusiones:
+* Respecto a la tabla de activación del bíceps, podemos concluir ciertos puntos. En primer lugar, para el bíceps es notable que los periodos de reposo corresponden a una poca activación, lo cual se puede apreciar en las gráficas de las tres tomas en reposo. La amplitud en estos periodos es baja, donde solo en una ocasión se logró superar las 50 unidades de amplitud. Esto concuerda con la respuesta muscular y diversas estructuras en esta etapa: un estado de reposo corresponde a un reclutamiento reducido de unidades motoras. Por otro lado, vemos que en los momentos de contracción sin carga existe un aumento en la amplitud, lo que corresponde a un mayor reclutamiento de unidades motoras para satisfacer la demanda. Sin embargo, el pico en la activación aparece al momento de aplicar la carga externa, donde la amplitud se dispara. Esta explicación se apoya también en la transformada. Si bien existe un pico prominente alrededor de 60Hz (probablemente a causa del ruido de la alimentación), también vemos prevalencias en frecuencias mayores (aunque en menor medida). Estas frecuencias corresponden a los momentos de contracción, ya sea con o sin carga. El necesitar más fuerza demandaría más unidades motoras al igual que un aumento en el ratio de disparo, aumentando de esta forma la frecuencia. Estos picos a frecuencias más altas no serían tan prominentes debido a que en el tiempo ocupan relativamente menos que los momentos en reposo. 
+
+* Se puede observar que, para este sector del músculo(tricep), al realizar las tomas generales de contracciones sin carga, se presenta un cierto patrón de activación explosiva. Esto se debe a que, durante estas contracciones, el sistema nervioso recluta principalmente unidades motoras pequeñas que controlan fibras de contracción rápida , capaces de generar fuerza rápidamente. Por otro lado, cuando se realizó la contracción con carga, se observó un incremento progresivo en la fuerza, lo que se refleja en la activación gradual de un mayor número de unidades motoras. A medida que la carga aumenta, el sistema nervioso comienza a reclutar unidades motoras más grandes, superando el umbral de activación de las fibras musculares. Este proceso permite generar la fuerza necesaria para resistir la carga creciente, lo que explica el aumento progresivo en la señal de activación muscular.
+
+* A partir de lo obtenido en la sección de gastrocnemio, se ve que en reposo no se evidencia o hay muy poca activación a unidades motoras,debido al mismo estado del músculo, pero a medida que lo contraemos hay un aumento de unidades motoras, además se ve que la contracción muscular con carga necesita de más unidades motoras  a medida que la carga es más exigente, por otro lado en la contracción sin carga se aprecia que hay cierto patrón que se mantiene.
+
+* En todas la gráficas de la frecuencia se observa un pico a los cercano a los 60 hz esto, se puede deber al ruido electrónico de la electricidad sabiendo que trabajamos a 220v @60hz o también puede ser causado por el mismo dispositivo Bitalino.
 
 ## Referencias bibliográficas
 [1] “Electromiografía y estudios de conducción nerviosa: Prueba de laboratorio de MedlinePlus”. Disponible en: https://medlineplus.gov/spanish/pruebas-de-laboratorio/electromiografia-y-estudios-de-conduccion-nerviosa/.
