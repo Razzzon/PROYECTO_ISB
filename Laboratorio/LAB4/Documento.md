@@ -20,12 +20,14 @@ Figura 1: Electrodos incluidos en el kit BITalino
 </b></center>
 <br>
 
+
 ![leyendo bitalino](imagenes/figura2.png)
 <center>
 <b>
 Figura 2: Leyenda del significado de los colores de los electrodos
 </b>
 </center> <br>
+
 
 De igual manera, cuenta con otros elementos electrónicos como un acelerómetro, buzzer, LEDs, etc.
 
@@ -35,6 +37,7 @@ De igual manera, cuenta con otros elementos electrónicos como un acelerómetro,
 Figura 3: Esquema de BITalino. Se puede apreciar cómo están dispuestos los sensores y elementos como el acelerómetro y módulo Bluetooth
 </b>
 </center> <br>
+
 
 Las señales captadas por la placa pueden ser visualizadas en tiempo real mediante el software OpenSignals para PC. Este hace uso de la conectividad Bluetooth que posee la placa (puede ser Bluetooth 2.0 + EDR, que mejora la velocidad de transferencia o Bluetooth 4.1 BLE) para poder así enviar los datos de forma inalámbrica hacia el ordenador, graficando amplitud vs tiempo. Estos datos pueden ser exportados en distintos formatos para su visualización y análisis en otros programas externos. Respecto a especificaciones más técnicas, el BITalino tiene la capacidad de muestrear a distintas frecuencias de muestreo: 1, 10, 100 y 1000 Hz, las cuales pueden ser seleccionadas vía el OpenSignals. La elección de la frecuencia está condicionada por la precisión y exactitud deseada, al igual que la capacidad del sensor. Por otro lado, el BITalino posee una batería recargable de polímero de litio de  3.7V, 700 mAh. Teniendo en cuenta su consumo promedio de 65mA, el BITalino tiene una autonomía de entre 8-10 horas. Su voltaje de operación es de 3.3V, y acepta en sus pines de entrada un rango de voltaje de entre 3V a 5.5V, lo que significa que cuenta con reguladores de voltaje internos.
 
