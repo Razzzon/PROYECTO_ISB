@@ -119,6 +119,23 @@ En esta prueba, se evaluó las señales de reposo y contracción del bíceps, te
 * Músculo a analizar: Tríceps
 * Movimiento muscular: Hiperextensión
 
+#### Información adicional
+El tríceps es un músculo que se encuentra ubicado en la parte posterior del brazo, está compuesto por tres porciones/cabezas: larga, medial y lateral. En el presente estudio se enfoca en el análisis de ejercicios para tríceps que provocan una mayor actividad muscular, para ello se realizaron los siguientes ejercicios:
+- Dips
+- Triangle push-ups
+- Contragolpes de tríceps
+- Extensiones de tríceps por encima de la cabeza
+- Pushdowns con barra 
+- Pushdowns con cuerda
+- Extensiones de tríceps con barra acostada
+- Press de banca con agarre cerrado
+Mediante el análisis de la señal electromiográfica, se determinó que triangle push-ups genera la mayor actividad muscular, en comparación con los otros ejercicios. En ese sentido, se normalizaron los datos obtenidos en función de triangle push-ups, dando como resultado que dips y contragolpes de tríceps no generan diferencia alguna, es decir estos ejercicios se pueden realizar de manera indistintiva obteniendo una actividad muscular similar. Sin embargo, hay ciertos ejercicios que generan una mayor actividad en ciertas partes del tríceps, este es el caso de bar and row pushdowns, dónde la activación de la cabeza lateral es significativamente mayor que en la cabeza larga[12]. 
+
+Teniendo en cuenta este estudio, se realizó la simulación del ejercicio de row pushdowns, el cual tiene un mayor rango de movimiento para la activación del tríceps. La diferencia es que en nuestro caso, utilizamos como carga externa a una fuerza generada por un compañero en contra al movimiento del ejercicio, en lugar de la cuerda a tensión.
+
+![brazo](Imagenes/brazo_foto.jpg)
+**Figura 5: Rop Pushdowns [12]**
+
 #### Tabla con gráficas de la señal adquirida
 ![tabla_tricep](imagenes/tabla_triceps.jpg)
 #### Video de la prueba
@@ -137,6 +154,8 @@ En esta prueba, se evaluó las señales de reposo y contracción del bíceps, te
 
 
 ![comparacion](Imagenes/comparacion_espectros.jpg)
+
+**Fourier (izquierda) y el movimiento del gastrocnemio (contracción sin carga)**
 
 #### Video de la prueba
 <video width="320" height="240" controls>
