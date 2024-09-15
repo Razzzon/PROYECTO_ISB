@@ -83,9 +83,42 @@ Ambas tècnicas, ademàs de diferenciarse por la invasividad, se diferencian en 
 9. Cada participante ejecutará, según el músculo que le corresponde: reposo, ejecución de fuerza sin carga y ejecución de fuerza con carga.
 10. Se detiene la adquisición de datos cuando cada participante finalice la ejecución de cada acción. Se guardan los datos en formato txt.
 11. Se vuelve a adquirir datos y el participante ejecutará la siguiente acción. Se detiene la adquisición al finalizar la acción. Se repetirá este proceso hasta que cada participante haya realizado las 3 acciones.
-12. Se realiza el procesamiento de datos utilizando el lenguaje de programación Python [8] [9] (mediante el aplicativo Visual Studio Code) y se entregarán las gráficas de la señal obtenida, filtrada y su espectro.
+12. Se realiza el procesamiento de datos utilizando el lenguaje de programación Python [8][9][10] (mediante el aplicativo Visual Studio Code) y se entregarán las gráficas de la señal obtenida, filtrada y su espectro.
 
 ## Resultados
+### Información sobre las tablas:
+* **Toma general**: Referida a los datos que incluyen las 3 acciones
+* **Transformada de Fourier General**: Transformada de Fourier de la señal general (que incluye las 3 acciones)
+* **Reposo**: Músculo relajado
+* **Sin carga**: Ejecución del movimiento muscular sin carga (fuerza externa)
+* **Con carga**: Ejecución del movimiento muscular con una carga (fuerza externa en sentido contrario al movimiento)
+
+
+### Prueba 1: 
+#### Información sobre la prueba:
+* Músculo a analizar: Bíceps
+* Movimiento muscular: Flexión
+
+#### Tabla con gráficas de la señal adquirida
+![tabla_bicep1](imagenes/tabla_bicep.jpg)
+![tabla_bicep2](imagenes/tabla_bicep2.jpg)
+---
+### Prueba 2:
+#### Información sobre la prueba:
+* Músculo a analizar: Tríceps
+* Movimiento muscular: Hiperextensión
+
+#### Tabla con gráficas de la señal adquirida
+![tabla_bicep](imagenes/tabla_triceps.jpg)
+---
+### Prueba 3:
+#### Información sobre la prueba:
+* Músculo a analizar: Gastrocnemio
+* Movimiento muscular: Flexión plantar
+
+#### Tabla con gráficas de la señal adquirida
+![tabla_bicep](imagenes/tabla_gastrocnemio.jpg)
+---
 
 ## Referencias bibliográficas
 [1] “Electromiografía y estudios de conducción nerviosa: Prueba de laboratorio de MedlinePlus”. Disponible en: https://medlineplus.gov/spanish/pruebas-de-laboratorio/electromiografia-y-estudios-de-conduccion-nerviosa/.
@@ -105,6 +138,12 @@ Ambas tècnicas, ademàs de diferenciarse por la invasividad, se diferencian en 
 [8] J. A. Cortés Gómez, D. S. Acebes Moreno, L. M. Peñuela Calderón, y A. Velasco Vivas, «Detección de fuerza y posición para los movimientos de flexión-extensión de codo a partir de señales de EMG», reveia, vol. 20, n.º 39, pp. 3924 pp. 1–20, feb. 2023. 
 
 [9] R. Guzmán-Venegas et al., “Efecto de la Amplitud de la Onda M sobre la Concordancia entre Evaluadores y el Número de Zonas de Inervación Detectadas en el Gastrocnemio Medial Mediante Electromiografía Multicanal”, International Journal of Morphology, vol. 41, núm. 6, pp. 1775–1780, 2023, doi: 10.4067/S0717-95022023000601775. Disponible en: http://www.scielo.cl/scielo.php?script=sci_abstract&pid=S0717-95022023000601775&lng=es&nrm=iso&tlng=en
+
+[10] D. Rodríguez-Ridao, J. A. Antequera-Vique, I. Martín-Fuentes, y J. M. Muyor, “Effect of Five Bench Inclinations on the Electromyographic Activity of the Pectoralis Major, Anterior Deltoid, and Triceps Brachii during the Bench Press Exercise”, International Journal of Environmental Research and Public Health, vol. 17, núm. 19, p. 7339, ene. 2020, doi: 10.3390/ijerph17197339. Disponible en: https://www.mdpi.com/1660-4601/17/19/7339
+
+[11] R. G. LeFavi, G. K. Limbaugh, J. D. Eitner, y B. L. Riemann, “Medial And Lateral Gastrocnemius Activation Differences During Heel Raise Exercise With Three Different Foot Positions: 1809: Board #159 May 27 3:30 PM - 5:00 PM”, Medicine & Science in Sports & Exercise, vol. 41, núm. 5, p. 137, may 2009, doi: 10.1249/01.MSS.0000354974.32823.a1. Disponible en: https://journals.lww.com/acsm-msse/Fulltext/2009/05001/Medial_And_Lateral_Gastrocnemius_Activation.2009.aspx. 
+
+[12] K.-S. Shih et al., “Modified Ankle Joint Neuromechanics during One-Legged Heel Raise Test after an Achilles Rupture and Its Associations with Jumping”, Applied Sciences, vol. 11, núm. 5, p. 2227, ene. 2021, doi: 10.3390/app11052227. Disponible en: https://www.mdpi.com/2076-3417/11/5/2227. 
 
 
 ## Anexos
