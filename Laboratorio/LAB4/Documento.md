@@ -5,6 +5,7 @@
 * [Introducción](#introducción)
 * [Objetivos](#objetivos)
 * [Materiales y objetivos usados](#materiales-y-equipos-usados)
+* [Procedimiento](#procedimiento)
 * [Resultados](#resultados)
 * [Referencias bibliográficas](#referencias-bibliográficas)
 * [Anexos](#anexos)
@@ -67,7 +68,7 @@ Ambas tècnicas, ademàs de diferenciarse por la invasividad, se diferencian en 
 * Laptop
 * Python (lenguaje de programación)
 
-## Resultados
+## Procedimiento
 1. Conectamos los electrodos en el cable del sensor de EMG
 2. Conectamos el cable en el puerto de EMG [A]
 3. Colocamos la batería del BITalino y lo encendemos [B]
@@ -79,8 +80,54 @@ Ambas tècnicas, ademàs de diferenciarse por la invasividad, se diferencian en 
 9. Cada participante ejecutará, según el músculo que le corresponde: reposo, ejecución de fuerza sin carga y ejecución de fuerza con carga.
 10. Se detiene la adquisición de datos cuando cada participante finalice la ejecución de cada acción. Se guardan los datos en formato txt.
 11. Se vuelve a adquirir datos y el participante ejecutará la siguiente acción. Se detiene la adquisición al finalizar la acción. Se repetirá este proceso hasta que cada participante haya realizado las 3 acciones.
-12. Se realiza el procesamiento de datos utilizando el lenguaje de programación Python (mediante el aplicativo Visual Studio Code) y se entregarán las gráficas de la señal obtenida, filtrada y su espectro.
+12. Se realiza el procesamiento de datos utilizando el lenguaje de programación Python [8] [9] (mediante el aplicativo Visual Studio Code) y se entregarán las gráficas de la señal obtenida, filtrada y su espectro.
+
+## Resultados
 
 ## Referencias bibliográficas
+[1] “Electromiografía y estudios de conducción nerviosa: Prueba de laboratorio de MedlinePlus”. Disponible en: https://medlineplus.gov/spanish/pruebas-de-laboratorio/electromiografia-y-estudios-de-conduccion-nerviosa/.
+
+[2] “Electromiografía - Mayo Clinic”. Disponible en: https://www.mayoclinic.org/es/tests-procedures/emg/about/pac-20393913. 
+
+[3] V. Gohel y N. Mehendale, “Review on electromyography signal acquisition and processing”, Biophys Rev, vol. 12, núm. 6, pp. 1361–1367, nov. 2020, doi: 10.1007/s12551-020-00770-w. Disponible en: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7755956/.
+
+[4] “Electromiografía: MedlinePlus enciclopedia médica”. Disponible en: https://medlineplus.gov/spanish/ency/article/003929.htm.
+
+[5]“came: Grupo de Investigación Biomédica - Electromiografía (EMG) - Dal”. Disponible en: https://www.dalcame.com/emg.html. 
+
+[6] F. Javier y F. Juan-Garcia, “UTILIDAD DE LA ELECTROMIOGRAFÍA DE SUPERFICIE EN REHABILITACIÓN”, mar. 2017.
+
+[7] E. Garcìa, G. Rojas, O. Nava y J. Ramiro, “Diseño y construcción de un prototipo de detecciòn de señales mioelèctricas de bajo costo”, Revista Electrònica ANFEI Digit., vol. 7, n.º 12, p. 10, 2020. [En línea]. Disponible: https://anfei.mx/revista/index.php/revista/article/view/661/1302
+
+[8] J. A. Cortés Gómez, D. S. Acebes Moreno, L. M. Peñuela Calderón, y A. Velasco Vivas, «Detección de fuerza y posición para los movimientos de flexión-extensión de codo a partir de señales de EMG», reveia, vol. 20, n.º 39, pp. 3924 pp. 1–20, feb. 2023. 
+
+[9] R. Guzmán-Venegas et al., “Efecto de la Amplitud de la Onda M sobre la Concordancia entre Evaluadores y el Número de Zonas de Inervación Detectadas en el Gastrocnemio Medial Mediante Electromiografía Multicanal”, International Journal of Morphology, vol. 41, núm. 6, pp. 1775–1780, 2023, doi: 10.4067/S0717-95022023000601775. Disponible en: http://www.scielo.cl/scielo.php?script=sci_abstract&pid=S0717-95022023000601775&lng=es&nrm=iso&tlng=en
+
 
 ## Anexos
+--- 
+[A] Conexión de los cables de los electrodos del EMG
+
+![anexo A](imagenes/A.png)
+---
+[B] Conexión de la batería al BITalino
+
+![anexo B](imagenes/B.png)
+--- 
+[C] Vinculación del Open Signals con el BITalino
+
+![anexo C](imagenes/C.png)
+---
+[D] Realizar la configuración del canal
+
+![anexo D](imagenes/D.png)
+---
+[E] Conexiones a los músculos que se analizarán
+
+![anexo E](imagenes/E.png)
+---
+[F] Open Signals capturando la data
+
+![anexo F](imagenes/F.png)
+
+
