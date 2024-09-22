@@ -176,7 +176,7 @@ Para todos las derivaciones se tiene este mismo comportamiento, por lo que no es
 
 <div align="center">
 
-| <img src="./Imagenes/figura11.jpg" alt="jumping_jacks" width="200"> |  <img src="./Imagenes/figura12.jpg" alt="jumping_jacks" width="170"> | <img src="./Imagenes/figura12.jpg" alt="jumping_jacks" width="200">|
+| <img src="./Imagenes/figura11.jpg" alt="jumping_jacks" width="200"> |  <img src="./Imagenes/figura12.jpg" alt="jumping_jacks" width="200"> | <img src="./Imagenes/figura12.jpg" alt="jumping_jacks" width="200">|
 | :----: | :-----: | :----:|
 | **Figura 10: Recuperación inicial** | **Figura 11: Recuperación gradual** | **Figura 12: Estado estable**|
 </div>
