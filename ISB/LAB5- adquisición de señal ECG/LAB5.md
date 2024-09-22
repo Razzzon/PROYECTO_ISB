@@ -218,7 +218,7 @@ Lo que estamos viendo son las 3 DII y todas son tomadas alrededor de 5 segundos.
 
 ## Video de prueba
 
-<video scr="https://github.com/HiroshiUPCH/Material-fluidos/issues/3#issue-2540624418.mp4"></video>
+<video scr="https://private-user-images.githubusercontent.com/153067200/369663059-a6b9f70d-8e52-4eb7-bb9e-c318771a2464.mp4"></video>
 
 
 
