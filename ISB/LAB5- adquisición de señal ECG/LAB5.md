@@ -1,25 +1,51 @@
-LABORATORIO 5: Uso de BITalino para ECG
+# LABORATORIO 5: Uso de BITalino para ECG
 
-1. **Introducción**  
-   Un electrocardiograma (ECG) es una técnica no invasiva que permite registrar la actividad eléctrica del corazón \[A6\], y es una herramienta de uso ampliamente extendido en lo que respecta a monitoreo y diagnóstico cardiaco. Una señal de ECG es captada por electrocardiografos, los cuales entregan/muestran la señal al usuario mediante papel milimetrado para ECG o en algunos casos de forma digital. Mediante esta técnica, es posible el diagnosticar distintos tipos de cardiopatías como lo son los distintos tipos de arritmias, infarto de miocardio, miocardiopatías, entre otras \[A7\]. Estas enfermedades pueden identificarse analizando las distintas ondas que posee un ECG: la onda P, Q, R, S y T, y la manera en la que estas se agrupan. Por ejemplo, un complejo QRS más ancho de lo esperado puede significar un engrosamiento ventricular \[A8\].   
-     
-   ![][image1]  
-   **Figura 1: Imágen referencial de los componentes de una señal de ECG**  
-     
-   Para poder captar estas señales, se hace uso de las derivaciones de ECG. Estas son, en esencia, distintas “vistas” desde donde se capta la actividad eléctrica cardiaca. Estas perspectivas se logran gracias a la colocación de electrodos, los cuales se disponen de distinta manera dependiendo de la derivación de interés. Lo común en el campo médico es encontrar ECG que usen hasta 12 derivaciones, las cuales son:  
+## **Tabla de contenidos:**
+<div style="border: 1px solid gray; padding: 20px;border-radius: 15px; width: 40%; height: 250px;">
+
+1. [**Introducción**](#1-introducción)  
+2. [**Objetivos**](#2-objetivos)
+3. [**Materiales y equipos**](#3-materiales-y-equipos)
+4. [**Procedimiento**](#4-procedimiento)
+5. [**Resultados**](#5-resultados)  
+   5.1. [**Resultados Generales**](#resultados-generales)
+6. [**Conclusiones**](#6-conclusiones)
+7. [**Referencias**](#7-referencias)
+
+</div>
+<!--  El uso del Padding es para controlar el espacio entre contenido y borde -->
+
+
+## **1) Introducción** 
+<p align="justify">
+   Un electrocardiograma (ECG) es una técnica no invasiva que permite registrar la actividad eléctrica del corazón [1], y es una herramienta de uso ampliamente extendido en lo que respecta a monitoreo y diagnóstico cardiaco. Una señal de ECG es captada por electrocardiografos, los cuales entregan/muestran la señal al usuario mediante papel milimetrado para ECG o en algunos casos de forma digital. Mediante esta técnica, es posible el diagnosticar distintos tipos de cardiopatías como lo son los distintos tipos de arritmias, infarto de miocardio, miocardiopatías, entre otras [2]. Estas enfermedades pueden identificarse analizando las distintas ondas que posee un ECG: la onda P, Q, R, S y T, y la manera en la que estas se agrupan. Por ejemplo, un complejo QRS más ancho de lo esperado puede significar un engrosamiento ventricular [3]. 
+</p>
+
+<div align="center">
+  <img src="./Imagenes/fig1.jpg" alt="EKG" width="250"><p>
+
+  **Figura 1: Imágen referencial de los componentes de una señal de ECG**
+  </p>
+</div>
+<br>
+
+<p align ="justify">
+Para poder captar estas señales, se hace uso de las derivaciones de ECG. Estas son, en esencia, distintas “vistas” desde donde se capta la actividad eléctrica cardiaca. Estas perspectivas se logran gracias a la colocación de electrodos, los cuales se disponen de distinta manera dependiendo de la derivación de interés. Lo común en el campo médico es encontrar ECG que usen hasta 12 derivaciones, las cuales son:
+</p> 
      
 * Tres derivadas bipolares (DI, DII, DIII)  
 * Tres derivadas unipolares (aVR, aVF, aVL)  
-* Seis derivadas precordiales (V1, V2, V3, V4, V5, V6)
+* Seis derivadas precordiales (V1, V2, V3, V4, V5, V6)  
 
-![][image2]  
+
+<div align="center">
+   <img src="./Imagenes/fig2.png" alt="Derivaciones" width="350">
+
 **Figura 2: Representación de las derivaciones cardiacas**  
- 
+</div>
+<br>
 
-2. **Objetivos**
-
-   
-
+## **2) Objetivos**
 * Sensar las señales de ECG usando el Bitalino  
 * Adquirir la señales del ECG usando Open Signals  
 * Obtener la derivada 1, derivada 2 y derivada 3 del ECG  
@@ -27,46 +53,61 @@ LABORATORIO 5: Uso de BITalino para ECG
 * Analizar el ECG obtenido, respecto derivada y de acuerdo a la actividad realizada  
     
     
-3. **Materiales y equipos**  
+## **3) Materiales y equipos**
 * Kit BITalino (placa y 3 cables para electrodos)  
 * 3 electrodos  
 * Laptop  
 * Cronómetro  
 * Software *Open Signals*  
-    
-4. **Procedimiento**
 
-Para todas las actividaes se usó el Bitalino como sensor y el Open Signals como el dispositivo que recolecta la información. Para esto primero se realizó la correcta conexión del Bitalino  con los cables de los electrodos y también la conexión con el software Open Signals. A la par también se colocaron los electrodos en la persona que se realizó la prueba. Para la colocación de los electrodos nos basamos respecto a esta imagen   
-![][image3]
+## **4) Procedimiento**
 
-**Figura 3:Posición de electrodos\[R1\]** 
+<p align="justify">
+Para todas las actividaes se usó el Bitalino como sensor y el Open Signals como el dispositivo que recolecta la información. Para esto primero se realizó la correcta conexión del Bitalino  con los cables de los electrodos y también la conexión con el software Open Signals. A la par también se colocaron los electrodos en la persona que se realizó la prueba. Para la colocación de los electrodos nos basamos respecto a esta imagen:
+</p>
 
-| ![][image4]  | ![][image5]  | ![][image6]  |
-| :---: | :---: | :---: |
-| Conexión cables de los electrodos con el BITalino  | Conexión del BITalino con el Open Signals | Prueba1 |
-| ![][image7]  | ![][image8]  | ![][image9]  |
-| Conexión del BITanilo y cables de electrodos con los electrodos en la persona | Conexión del BITanilo y cables de electrodos con los electrodos en la persona | Prueba 2 |
+<div align="center">
+   <img src="./Imagenes/fig3.jpg" alt="posicion_electrodos" width="250">
 
-**Figura 4:Tabla de imágenes sobre el procedimiento**  
-**Elaboración propia**  
+**Figura 3: Posición de electrodos [R1]**  
+</div>
+<br>
+
+<div align="center">
+   <img src="./Imagenes/fig4.jpg" alt="Derivaciones" width="500">  
+
+**Figura 4: Tabla de imágenes sobre el procedimiento**  
+**Elaboración propia** 
+</div>
+ <br>
 
 - ***Estado basal***
+<p align="justify">
+La primera actividad consiste en realizar la medición del electrocardiograma en el estado de reposo (cuando la persona no ha realizado ninguna actividad que requiera algún esfuerzo).  
+Para la medición, a la persona se la sentó en una silla y se mantuvo en reposo durante 1 min.  
+Este procedimiento se realizó para la primera derivada, segunda derivada y tercera derivada.  
+Para cada derivada se intercambió las posiciones de los cables (positivo,negativo y neutro) del ECG:
+</p>  
 
-La primera actividad consiste en realizar la medición del electrocardiograma en el estado de reposo( cuando la persona no ha realizado ninguna actividad que requiera algún esfuerzo).  
-Para la medición a la persona se la sentó en una silla y se mantuvo en reposo durante 1 min.  
-Este procedimiento se realizó tanto para la primera derivada,segunda derivada y tercera derivada.  
-Para las deriva se intercambió las posiciones de los cables(positivo,negativo y neutro) del ECG    
-1ra derivada \= brazo izquierdo positivo , brazo derecho negativo, cresta iliaca positivo  
-2da derivada= brazo izquierdo neutro , brazo derecho negativo, cresta iliaca positivo     
-3ra derivada \= brazo izquierdo negativo , brazo derecho neutro, cresta iliaca positivo  
+<div align="center">
 
-![][image10]
+**1ra derivada** = brazo izquierdo positivo, brazo derecho negativo, cresta iliaca positivo  
+**2da derivada** = brazo izquierdo neutro, brazo derecho negativo, cresta iliaca positivo     
+**3ra derivada** = brazo izquierdo negativo, brazo derecho neutro, cresta iliaca positivo  
+</div>
+<br>
 
-**Figura 5:Persona sentada en estado basal**
+<div align="center">
+   <img src="./Imagenes/fig5.jpg" alt="Derivaciones" width="150">  
+
+**Figura 5: Persona sentada en estado basal**
+</div>
+<br>
 
 - ***Mantener respiración***
-
-La segunda fase consistió en realizar la medición del electrocardiograma durante el reposo después de mantener la respiración durante 20 segundos. …\[DP1\]
+<p align="justify">
+La segunda fase consistió en realizar la medición del electrocardiograma durante el proceso de mantener la respiración durante 20 segundos y su posterior reposo. Esta actividad simula una apnea donde se observa una disminución temporal de la frecuencia cardíaca al inicio del proceso, seguido de un aumento gradual en la frecuencia cardíaca hacia el final de la apnea debido al aumento de la presión parcial de dióxido de carbono en la sangre. Entonces, durante la apnea se observa bradicardia debido a la disminución de oxígeno en la sangre y una vez que el episodio de apnea termina, se observa taquicardia como respuesta compensatoria. Este comportamiento genera un marcador fiable en el ECG, el cual sería un desequilibrio en el intervalo R-R[DP1].
+</p>
 
 - ***Actividad física***
 
@@ -79,9 +120,8 @@ La tercera fase consistió en la medición del electrocardiograma, luego de la r
 
 **Figura 6: Tabla de los ejercicios realizados**  
 Todo lo anterior da un total de 5 minutos de actividad física por parte del participante.
-
-5. **Resultados**  
-     
+  
+## **5) Resultados**
 - ***Estado basal***
 
 *Para la obtención de las gráficas se realizó un filtrado de 0.5hz hasta 55 hz(señal original) y otro filtrador de 65 hz hasta 100 hz(señal original), para disminuir el ruido electrónico que es de 60 hz y también tomando en cuenta que el rango de la frecuencia de la señal de ECG está entre 0 hz \-100 hz.*  
@@ -125,8 +165,18 @@ Se muestran los resultados de la señal de ECG para el participante luego de 5 m
 
 Existe evidencia de que la contracción de los músculos estriados contamina en gran medida la señal de ECG \[A3\]. Esta contaminación por artefactos musculares puede acentuarse por el hecho de que el rango de frecuencias del músculo estriado (2 \- 500 Hz) engloba al del ECG (0.5 \- 100 Hz) \[A4\], lo que se presta a que se infiltren las señales musculares a la lectura ya que no pueden ser filtradas en su totalidad.  Entonces, la aparición de más componentes de frecuencia en la transformada puede explicarse por este último punto: la mayor tasa de actividad mioeléctrica ocasiona que se infiltren señales musculares durante la medición del ECG. Por otro lado, vemos que en las distintas derivaciones, la señal cardiaca parece oscilar de forma más frecuente que en otros estados, es decir, visualmente luce más comprimida. Se ha encontrado que en actividad y post actividad, elementos de la señal como el complejo QRS y el intervalo QT se vuelven más cortos \[A5\], lo cual va de la mano con los resultados obtenidos en el escenario de ejercicio.
 
-6. **Conclusiones**  
-     
-     
-     
-7. **Referencias**  
+### Resultados generales <a name="resultados_gnerales"></a>
+<div align="center">
+   <img src="./Imagenes/resultado_final.jpg" alt="Derivaciones" width="500">  
+</div>
+
+<p align ="justify">
+Lo que estamos viendo son las 3 DII y todas son tomadas alrededor de 5 segundos. Se observa que, en estado basal, que son 7 y que mantener la respiración también son 7 y la DIII son 12. Con esto podemos decir que cuando se hace ejercicio, se tiene un LPM mayor.
+</p>
+
+## **6) Conclusiones**    
+* Al analizar la **DII**, los componentes de una señal de ECG (onda P, segmento ST, complejo QRS y otros) se distinguen mejor en comparación de **DIII** y **DI**.  
+* La frecuencia cardiaca aumenta cuando el usuario hace ejercicio; sin embargo, se observó que este se mantiene ante estado basal y al sostener la respiración.  
+* 
+
+## **7) Referencias**

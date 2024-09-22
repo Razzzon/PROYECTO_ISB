@@ -105,6 +105,7 @@ En esta prueba, se evaluó las señales de reposo y contracción del bíceps, te
 
 #### Tabla con gráficas de la señal adquirida
 ![tabla_bicep1](imagenes/tabla_bicep.jpg)
+
 ![tabla_bicep2](imagenes/tabla_bicep2.jpg)
 
 #### Video de la prueba
