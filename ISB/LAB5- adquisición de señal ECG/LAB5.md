@@ -68,7 +68,7 @@ Para todas las actividaes se usó el Bitalino como sensor y el Open Signals como
 <div align="center">
    <img src="./Imagenes/fig3.jpg" alt="posicion_electrodos" width="250">
 
-**Figura 3: Posición de electrodos [R1]**  
+**Figura 3: Posición de electrodos [4]**  
 </div>
 <br>
 
@@ -105,7 +105,7 @@ Para cada derivada se intercambió las posiciones de los cables (positivo,negati
 
 - ***Mantener respiración***
 <p align="justify">
-La segunda fase consistió en realizar la medición del electrocardiograma durante el proceso de mantener la respiración durante 20 segundos y su posterior reposo. Esta actividad simula una apnea, donde se observa una disminución temporal de la frecuencia cardíaca al inicio del proceso, seguido de un aumento gradual en la frecuencia cardíaca hacia el final de la apnea, debido al aumento de la presión parcial de dióxido de carbono en la sangre. Entonces, durante la apnea se observa bradicardia, debido a la disminución de oxígeno en la sangre y una vez que el episodio de apnea termina, se observa taquicardia como respuesta compensatoria. Este comportamiento genera un marcador fiable en el ECG, el cual sería un desequilibrio en el intervalo R-R[DP1].
+La segunda fase consistió en realizar la medición del electrocardiograma durante el proceso de mantener la respiración durante 20 segundos y su posterior reposo. Esta actividad simula una apnea donde se observa una disminución temporal de la frecuencia cardíaca al inicio del proceso, seguido de un aumento gradual en la frecuencia cardíaca hacia el final de la apnea debido al aumento de la presión parcial de dióxido de carbono en la sangre. Entonces, durante la apnea se observa bradicardia debido a la disminución de oxígeno en la sangre y una vez que el episodio de apnea termina, se observa taquicardia como respuesta compensatoria. Este comportamiento genera un marcador fiable en el ECG, el cual sería un desequilibrio en el intervalo R-R [5].
 </p>
 
 - ***Actividad física***
@@ -133,49 +133,59 @@ Posterior se sumó las dos señales filtradas para obtener los gráficos
 </p>
 
 <div align="center">
-   <img src="./Imagenes/fig4.jpg" alt="tabla_4" width="250">  
+   <img src="./Imagenes/fig 7.jpg" alt="tabla_4" width="500">  
 
 **Figura 7: Tabla de ECG(Derivada I,II,III ) y FFT estado basal**
 </div>
 <br>
 
 <p align="justify">
-Posterior al registro electrocardiográfico en estado basal ,se obtuvieron 3 trazos correspondientes a las Derivadas I, II y III respectivamente como se muestran en los gráficos anteriores, los cuales muestran una buena calidad de la señal y una interferencia de ruido  baja tras la aplicación de la Trasnformda de Fourier, es así que permite de forma adecuada identificar  las ondas P, QRS y T en cada derivada. 
+Posterior al registro electrocardiográfico en estado basal ,se obtuvieron 3 trazos correspondientes a las Derivadas I, II y III respectivamente como se muestran en los gráficos anteriores, los cuales muestran una buena calidad de la señal y una interferencia de ruido  baja tras la aplicación de la Trasnformda de Fourier, es así que permite de forma adecuada identificar las ondas P, QRS y T en cada derivada. 
 
-Es importante resaltar que BItalino ha demostrado evidenciar un ECG al cual el profesional en salud puede dar lectura, en este caso tenemos un sujeto estable en estado basal sin patologías subyacetes , por ende la descripción de este ECG se rige a la literatura \[R2\]como :
+Es importante resaltar que BItalino ha demostrado evidenciar un ECG al cual el profesional en salud puede dar lectura, en este caso tenemos un sujeto estable en estado basal sin patologías subyacetes, por ende la descripción de este ECG se rige a la literatura [6]como :
 </p>
 
-| Ritmo cardiaco sinusal porque presenta onda P positiva. | ![][image20] |
-| :---- | :---- |
-| Ritmo regular porque presenta intervalos R-R idénticos,en cuanto a la Frecuencia cardiaca se evidencia en 1 minuto 78 latidos (normal de 60-100 latidos). | ***![][image21]*** |
-| Ondas onda P  100 mseg (normal : menos de 100 mseg ), complejo QRS 65 mseg (normal: entre 60-100 mseg) , intervalo QT  350 mseg (normal de 350 a 450 mseg) | ***![][image22]*** |
+<div align="center">
+   <img src="./Imagenes/fig8.jpg" alt="tabla_ECG" width="550">  
 
 **Figura 8: Tabla de ECG(Derivada II ), onda P, lpm y duración de los tramos(onda p,complejo QRS e intervalo QT)**
+</div>
+<br>
 
 - ***Mantener respiración***
 
-| *Derivada I* | ![][image23] | ![][image24] |
-| :---- | :---- | :---- |
-| ***Derivada II*** | ![][image25] | ![][image26] |
-| ***Derivada III*** | ![][image27] | ![][image28] |
+<div align="center">
+   <img src="./Imagenes/fig9(diego).jpg" alt="tabla_ECG" width="550">  
 
 **Figura 9: Tabla de ECG(Derivada I,II,III ) y FFT estado basal**
+</div>
+<br>
+<p align="justify">
+De las gráficas obtenidas, notamos que el paciente está atravesando por un proceso de adaptación fisiológica. Las etapas son las siguientes: Recuperación inicial, se caracteriza por un intervalo R-R corto, lo que indica un aumento en la frecuencia cardiaca, en este caso el valor del intervalo es menor a 1 segundo, luego, aparece la etapa de recuperación gradual, una vez experimentada la frecuencia cardiaca alta, esta tenderá a bajar y alcanzar valores normales, por lo que el intervalo R-R aumentará gradualmente. Finalmente, encontramos una etapa estable, en esta parte el intervalo R-R tiende a mantener un valor
+</p>
+
+<br>
 
 - ***Actividad física***
+<div align="center">
+   <img src="./Imagenes/fig10.png" alt="actividad_fisica" width="600">  
 
+**Figura 13: Tabla de ECG(Derivada I,II,III ) y FFT ejercicio**
+</div>
 
-***![][image29]***  
-![][image30]  
+<p align="justify">
+Se muestran los resultados de la señal de ECG para el participante luego de 5 minutos de ejercicio aeróbico y anaeróbico, con énfasis en los primeros. Visualmente, si bien se conserva de manera general el patrón en las derivadas, destaca un comportamiento errático en la primera derivada en comparación a la señal adquirida para esta misma pero en reposo. Sumado a esto, mediante la transformada de Fourier apreciamos que la señal contiene varios componentes con distintas frecuencias, lo que se puede ver de forma más prominente en la transformada de la tercera derivada. Todos estos cambios en la señal y por consecuente su transformada podrían atribuirse en primera instancia al ruido muscular. El tejido muscular, con énfasis en el estriado, puede llegar a tener altas demandas energéticas a causa de distintos tipos de estrés [11]. Al momento de realizar ejercicio, los músculos se activan en mayor medida debido a el aumento en la tasa de impulsos enviados. Esto desemboca en la liberación de iones de calcio en el tejido muscular, lo que induce más contracción y por tanto mayor liberación de ATP por parte de las mitocondrias para satisfacer la demanda [11]. El factor clave en este caso son los impulsos eléctricos enviados, ya que existen diversidad de manifestaciones mioeléctricas ocasionadas por la fatiga muscular del estrés mecánico [12] de eventos como hacer ejercicio. Esta señalización puede llegar a interferir en el ECG, en concreto por la actividad residual: incluso si la persona ya no está en movimiento, los músculos que han sido activados pueden continuar generando impulsos que interfieren con la señal.  
+Existe evidencia de que la contracción de los músculos estriados contamina en gran medida la señal de ECG [13]. Esta contaminación por artefactos musculares puede acentuarse por el hecho de que el rango de frecuencias del músculo estriado (2 - 500 Hz) engloba al del ECG (0.5 - 100 Hz) [14], lo que se presta a que se infiltren las señales musculares a la lectura ya que no pueden ser filtradas en su totalidad.  Entonces, la aparición de más componentes de frecuencia en la transformada puede explicarse por este último punto: la mayor tasa de actividad mioeléctrica ocasiona que se infiltren señales musculares durante la medición del ECG. Por otro lado, vemos que en las distintas derivaciones, la señal cardiaca parece oscilar de forma más frecuente que en otros estados, es decir, visualmente luce más comprimida. Se ha encontrado que en actividad y post actividad, elementos de la señal como el complejo QRS y el intervalo QT se vuelven más cortos [15], lo cual va de la mano con los resultados obtenidos en el escenario de ejercicio.
+</p>
 
-**Figura 10: Tabla de ECG(Derivada I,II,III ) y FFT ejercicio**  
-Se muestran los resultados de la señal de ECG para el participante luego de 5 minutos de ejercicio aeróbico y anaeróbico, con énfasis en los primeros. Visualmente, si bien se conserva de manera general el patrón en las derivadas, destaca un comportamiento errático en la primera derivada en comparación a la señal adquirida para esta misma pero en reposo. Sumado a esto, mediante la transformada de Fourier apreciamos que la señal contiene varios componentes con distintas frecuencias, lo que se puede ver de forma más prominente en la transformada de la tercera derivada. Todos estos cambios en la señal y por consecuente su transformada podrían atribuirse en primera instancia al ruido muscular. El tejido muscular, con énfasis en el estriado, puede llegar a tener altas demandas energéticas a causa de distintos tipos de estrés \[A1\]. Al momento de realizar ejercicio, los músculos se activan en mayor medida debido a el aumento en la tasa de impulsos enviados. Esto desemboca en la liberación de iones de calcio en el tejido muscular, lo que induce más contracción y por tanto mayor liberación de ATP por parte de las mitocondrias para satisfacer la demanda \[A1\]. El factor clave en este caso son los impulsos eléctricos enviados, ya que existen diversidad de manifestaciones mioeléctricas ocasionadas por la fatiga muscular del estrés mecánico \[A2\] de eventos como hacer ejercicio. Esta señalización puede llegar a interferir en el ECG, en concreto por la actividad residual: incluso si la persona ya no está en movimiento, los músculos que han sido activados pueden continuar generando impulsos que interfieren con la señal. 
-
-Existe evidencia de que la contracción de los músculos estriados contamina en gran medida la señal de ECG \[A3\]. Esta contaminación por artefactos musculares puede acentuarse por el hecho de que el rango de frecuencias del músculo estriado (2 \- 500 Hz) engloba al del ECG (0.5 \- 100 Hz) \[A4\], lo que se presta a que se infiltren las señales musculares a la lectura ya que no pueden ser filtradas en su totalidad.  Entonces, la aparición de más componentes de frecuencia en la transformada puede explicarse por este último punto: la mayor tasa de actividad mioeléctrica ocasiona que se infiltren señales musculares durante la medición del ECG. Por otro lado, vemos que en las distintas derivaciones, la señal cardiaca parece oscilar de forma más frecuente que en otros estados, es decir, visualmente luce más comprimida. Se ha encontrado que en actividad y post actividad, elementos de la señal como el complejo QRS y el intervalo QT se vuelven más cortos \[A5\], lo cual va de la mano con los resultados obtenidos en el escenario de ejercicio.
 
 ### Resultados generales <a name="resultados_gnerales"></a>
 <div align="center">
-   <img src="./Imagenes/resultado_final.jpg" alt="Derivaciones" width="500">  
+   <img src="./Imagenes/resultado_final.jpg" alt="Derivaciones" width="550">  
+
+   **Figura 14: Comparación entre las 3 actividades en la DII**
 </div>
+<br>
 
 <p align ="justify">
 Lo que estamos viendo son las 3 DII y todas son tomadas alrededor de 5 segundos. Se observa que, en estado basal, que son 7 y que mantener la respiración también son 7 y la DIII son 12. Con esto podemos decir que cuando se hace ejercicio, se tiene un LPM mayor.
@@ -187,3 +197,30 @@ Lo que estamos viendo son las 3 DII y todas son tomadas alrededor de 5 segundos.
 * 
 
 ## **7) Referencias**
+1. “Electrocardiogram (ECG or EKG),” Mayoclinic.org, 02-Apr-2024. [Online]. Disponible en: https://www.mayoclinic.org/tests-procedures/ekg/about/pac-20384983.  
+2. I. Monedero, “A novel ECG diagnostic system for the detection of 13 different diseases”, Engineering Applications of Artificial Intelligence, vol. 107, p. 104536, ene. 2022, doi: 10.1016/j.engappai.2021.104536. Disponible en: https://www.sciencedirect.com/science/article/pii/S0952197621003845.  
+3. “QRS Complex - an overview | ScienceDirect Topics”. Disponible en: https://www.sciencedirect.com/topics/immunology-and-microbiology/qrs-complex.  
+4. PLUX Biosignals, BITalino (r)evolution Home Guide: Experimental Guides to Meet & Learn Your Biosignals, disponible en: https://support.pluxbiosignals.com/wp-content/uploads/2022/04/HomeGuide2_ECG.pdf  
+5. A. S. J and P. S. H. Jose, "Review on Obstructive Sleep Apnea Detection using ECG Signals," 2022 4th International Conference on Smart Systems and Inventive Technology (ICSSIT), Tirunelveli, India, 2022, pp. 680-684, doi: 10.1109/ICSSIT53264.2022.9716342.  
+6. “Jumping Jacks, el ejercicio cardiovascular que tonifica todo el cuerpo”, Diario ABC, el 8 de abril de 2020. Disponible en: https://www.abc.es/bienestar/fitness/abci-jumping-jacks-202004080958_noticia.html.  
+7. “Burpees: qué es, para qué sirve y cómo hacer bien este ejercicio”, Diario ABC, el 24 de septiembre de 2019. Disponible en: https://www.abc.es/bienestar/fitness/abci-burpees-201909241622_noticia.html.  
+8. “Push-ups, mucho más que entrenar pectorales - ESPN”. Disponible en: https://www.espn.com.ar/espn-run/nota/_/id/7077327/push-ups-mucho-mas-que-entrenar-pectorales.  
+9. Conarec, Electrocardiograma, Laboratorios Roemmers, noviembre 2023. Disponible en: https://conarec.org/wp-content/uploads/2024/01/Electrocardiograma.pdf  
+10. A. Sharaf, “Sleep Apnea Detection Using Wavelet Scattering Transformation and Random Forest Classifier”, feb. 2023, doi: 10.3390/e25030399  
+11. A. M. Philp, N. J. Saner, M. Lazarou, I. G. Ganley, and A. Philp, “The influence of aerobic exercise on mitochondrial quality control in skeletal muscle,” The Journal of Physiology, vol. 599, no. 14, pp. 3463–3476, Jan. 2021, doi: 10.1113/jp279411.  
+12. P. Georgiou and E. Koutsos, “Microelectronics for muscle fatigue monitoring through surface EMG,” Springer eBooks, 2017, pp. 133–162. doi: 10.1007/978-3-319-67723-1_6.  
+13. A. R. Pérez‐Riera, R. Barbosa‐Barros, R. Daminello‐Raimundo, and L. C. De Abreu, “Main artifacts in electrocardiography,” Annals of Noninvasive Electrocardiology, vol. 23, no. 2, Sep. 2017, doi: 10.1111/anec.12494.  
+14. J. Bronzino, Medical Devices and Systems. Boca Raton, FL, USA: CRC Press, 2006.  
+15. L. Kocsis et al., “Exercise-Induced Electrocardiographic Changes in Healthy Young Males with Early Repolarization Pattern,” Diagnostics, vol. 14, no. 10, p. 980, May 2024, doi: 10.3390/diagnostics14100980.
+<br>
+<br>
+<br>
+
+## Video de prueba
+<video scr="https://github.com/user-attachments/assets/a6b9f70d-8e52-4eb7-bb9e-c318771a2464.mp4"></video>
+
+
+
+
+
+
