@@ -1,7 +1,7 @@
 # LABORATORIO 5: Uso de BITalino para ECG
 
 ## **Tabla de contenidos:**
-<div style="border: 1px solid gray; padding: 20px;border-radius: 15px; width: 40%; height: 250px;">
+<div style="border: 2px solid gray; padding: 20px;border-radius: 15px; width: 40%; height: 250px;">
 
 1. [**Introducción**](#1-introducción)  
 2. [**Objetivos**](#2-objetivos)
@@ -11,7 +11,6 @@
    5.1. [**Resultados Generales**](#resultados-generales)
 6. [**Conclusiones**](#6-conclusiones)
 7. [**Referencias**](#7-referencias)
-
 </div>
 <!--  El uso del Padding es para controlar el espacio entre contenido y borde -->
 
@@ -74,7 +73,7 @@ Para todas las actividaes se usó el Bitalino como sensor y el Open Signals como
 <br>
 
 <div align="center">
-   <img src="./Imagenes/fig4.jpg" alt="Derivaciones" width="500">  
+   <img src="./Imagenes/fig4.jpg" alt="procedimientos" width="700">  
 
 **Figura 4: Tabla de imágenes sobre el procedimiento**  
 **Elaboración propia** 
@@ -98,7 +97,7 @@ Para cada derivada se intercambió las posiciones de los cables (positivo,negati
 <br>
 
 <div align="center">
-   <img src="./Imagenes/fig5.jpg" alt="Derivaciones" width="150">  
+   <img src="./Imagenes/fig5.jpg" alt="Derivaciones" width="250">  
 
 **Figura 5: Persona sentada en estado basal**
 </div>
@@ -106,37 +105,45 @@ Para cada derivada se intercambió las posiciones de los cables (positivo,negati
 
 - ***Mantener respiración***
 <p align="justify">
-La segunda fase consistió en realizar la medición del electrocardiograma durante el proceso de mantener la respiración durante 20 segundos y su posterior reposo. Esta actividad simula una apnea donde se observa una disminución temporal de la frecuencia cardíaca al inicio del proceso, seguido de un aumento gradual en la frecuencia cardíaca hacia el final de la apnea debido al aumento de la presión parcial de dióxido de carbono en la sangre. Entonces, durante la apnea se observa bradicardia debido a la disminución de oxígeno en la sangre y una vez que el episodio de apnea termina, se observa taquicardia como respuesta compensatoria. Este comportamiento genera un marcador fiable en el ECG, el cual sería un desequilibrio en el intervalo R-R[DP1].
+La segunda fase consistió en realizar la medición del electrocardiograma durante el proceso de mantener la respiración durante 20 segundos y su posterior reposo. Esta actividad simula una apnea, donde se observa una disminución temporal de la frecuencia cardíaca al inicio del proceso, seguido de un aumento gradual en la frecuencia cardíaca hacia el final de la apnea, debido al aumento de la presión parcial de dióxido de carbono en la sangre. Entonces, durante la apnea se observa bradicardia, debido a la disminución de oxígeno en la sangre y una vez que el episodio de apnea termina, se observa taquicardia como respuesta compensatoria. Este comportamiento genera un marcador fiable en el ECG, el cual sería un desequilibrio en el intervalo R-R[DP1].
 </p>
 
 - ***Actividad física***
-
+<p align="justify">
 La tercera fase consistió en la medición del electrocardiograma, luego de la realización de 5 minutos de actividad física. En el presente laboratorio, la actividad consistió:
+</p>
 
-| *Jumping jacks(*2 min y 50 s*)* | *![][image11]* |
+| *Jumping jacks(*2 min y 50 s*)* |  <img src="./Imagenes/jumping.png" alt="jumping_jacks" width="250"> |
 | :---- | ----- |
-| *Burpees(*2 minutos  *)* | ![][image12] |
-| *Push-ups(*10 segundos*)* | ![][image13] |
+| ***Burpees(2 minutos)*** |  <img src="./Imagenes/burpees.png" alt="burpees" width="250"> |
+| ***Push-ups(10 segundos)*** | <img src="./Imagenes/push.png" alt="push_ups" width="250"> |
+
+<div align="center">
 
 **Figura 6: Tabla de los ejercicios realizados**  
+</div>
 Todo lo anterior da un total de 5 minutos de actividad física por parte del participante.
-  
+<br>
+
 ## **5) Resultados**
 - ***Estado basal***
+<p align="justify">
+Para la obtención de las gráficas se realizó un filtrado de 0.5hz hasta 55 hz(señal original) y otro filtrador de 65 hz hasta 100 hz(señal original), para disminuir el ruido electrónico que es de 60 hz y también tomando en cuenta que el rango de la frecuencia de la señal de ECG está entre 0 hz \-100 hz.  
+Posterior se sumó las dos señales filtradas para obtener los gráficos
+</p>
 
-*Para la obtención de las gráficas se realizó un filtrado de 0.5hz hasta 55 hz(señal original) y otro filtrador de 65 hz hasta 100 hz(señal original), para disminuir el ruido electrónico que es de 60 hz y también tomando en cuenta que el rango de la frecuencia de la señal de ECG está entre 0 hz \-100 hz.*  
-*Posterior se sumó las dos señales filtradas para obtener los gráficos*
-
-| *Derivada I* | *![][image14]* | *![][image15]* |
-| :---- | :---- | :---- |
-| ***Derivada II*** | ***![][image16]*** | ***![][image17]*** |
-| ***Derivada III*** | ***![][image18]*** | ***![][image19]*** |
+<div align="center">
+   <img src="./Imagenes/fig4.jpg" alt="tabla_4" width="250">  
 
 **Figura 7: Tabla de ECG(Derivada I,II,III ) y FFT estado basal**
+</div>
+<br>
 
+<p align="justify">
 Posterior al registro electrocardiográfico en estado basal ,se obtuvieron 3 trazos correspondientes a las Derivadas I, II y III respectivamente como se muestran en los gráficos anteriores, los cuales muestran una buena calidad de la señal y una interferencia de ruido  baja tras la aplicación de la Trasnformda de Fourier, es así que permite de forma adecuada identificar  las ondas P, QRS y T en cada derivada. 
 
 Es importante resaltar que BItalino ha demostrado evidenciar un ECG al cual el profesional en salud puede dar lectura, en este caso tenemos un sujeto estable en estado basal sin patologías subyacetes , por ende la descripción de este ECG se rige a la literatura \[R2\]como :
+</p>
 
 | Ritmo cardiaco sinusal porque presenta onda P positiva. | ![][image20] |
 | :---- | :---- |
