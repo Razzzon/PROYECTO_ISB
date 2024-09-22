@@ -107,29 +107,36 @@ Para cada derivada se intercambió las posiciones de los cables (positivo,negati
 <p align="justify">
 La segunda fase consistió en realizar la medición del electrocardiograma durante el proceso de mantener la respiración durante 20 segundos y su posterior reposo. Esta actividad simula una apnea donde se observa una disminución temporal de la frecuencia cardíaca al inicio del proceso, seguido de un aumento gradual en la frecuencia cardíaca hacia el final de la apnea debido al aumento de la presión parcial de dióxido de carbono en la sangre. Entonces, durante la apnea se observa bradicardia debido a la disminución de oxígeno en la sangre y una vez que el episodio de apnea termina, se observa taquicardia como respuesta compensatoria. Este comportamiento genera un marcador fiable en el ECG, el cual sería un desequilibrio en el intervalo R-R [5].
 </p>
+<br>
 
 - ***Actividad física***
 <p align="justify">
 La tercera fase consistió en la medición del electrocardiograma, luego de la realización de 5 minutos de actividad física. En el presente laboratorio, la actividad consistió:
 </p>
 
+<div align="center">
+
 | *Jumping jacks(*2 min y 50 s*)* |  <img src="./Imagenes/jumping.png" alt="jumping_jacks" width="250"> |
 | :---- | ----- |
 | ***Burpees(2 minutos)*** |  <img src="./Imagenes/burpees.png" alt="burpees" width="250"> |
 | ***Push-ups(10 segundos)*** | <img src="./Imagenes/push.png" alt="push_ups" width="250"> |
 
+</div>
+
 <div align="center">
 
 **Figura 6: Tabla de los ejercicios realizados**  
 </div>
+<br>
+
 Todo lo anterior da un total de 5 minutos de actividad física por parte del participante.
 <br>
 
 ## **5) Resultados**
 - ***Estado basal***
 <p align="justify">
-Para la obtención de las gráficas se realizó un filtrado de 0.5hz hasta 55 hz(señal original) y otro filtrador de 65 hz hasta 100 hz(señal original), para disminuir el ruido electrónico que es de 60 hz y también tomando en cuenta que el rango de la frecuencia de la señal de ECG está entre 0 hz \-100 hz.  
-Posterior se sumó las dos señales filtradas para obtener los gráficos
+Para la obtención de las gráficas se realizó un filtrado de 0.5 hz hasta 55 hz(señal original) y otro filtrador de 65 hz hasta 100 hz (señal original), para disminuir el ruido electrónico que es de 60 hz y también tomando en cuenta que el rango de la frecuencia de la señal de ECG está entre 0 - 100 hz.  
+Posterior se sumó las dos señales filtradas para obtener los gráficos.
 </p>
 
 <div align="center">
@@ -197,9 +204,13 @@ Lo que estamos viendo son las 3 DII y todas son tomadas alrededor de 5 segundos.
 </p>
 
 ## **6) Conclusiones**    
+<p align="justify">
+
 * Al analizar la **DII**, los componentes de una señal de ECG (onda P, segmento ST, complejo QRS y otros) se distinguen mejor en comparación de **DIII** y **DI**.  
 * La frecuencia cardiaca aumenta cuando el usuario hace ejercicio; sin embargo, se observó que este se mantiene ante estado basal y al sostener la respiración.  
-
+* Se concluye que, durante el análisis del ECG en la actividad de mantener la respiración, se observa un aumento en la frecuencia cardíaca durante la fase inicial de recuperación, lo que genera un intervalo R-R más corto. Posteriormente, ocurre una recuperación gradual en la que la frecuencia cardíaca disminuye hasta estabilizarse, alcanzando valores normales en el intervalo R-R.  
+* La primera derivada es la más sensible al ruido ocasionado por la actividad muscular estriada, evidenciado por el patrón caótico en la señal y la aparición de más componentes de frecuencia en la transformada. Patrones como el complejo QRS resultan los más afectados. 
+</p>
 
 ## **7) Referencias**
 1. “Electrocardiogram (ECG or EKG),” Mayoclinic.org, 02-Apr-2024. [Online]. Disponible en: https://www.mayoclinic.org/tests-procedures/ekg/about/pac-20384983.  
