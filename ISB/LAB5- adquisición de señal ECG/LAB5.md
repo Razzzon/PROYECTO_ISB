@@ -161,8 +161,13 @@ Es importante resaltar que BItalino ha demostrado evidenciar un ECG al cual el p
 </div>
 <br>
 <p align="justify">
-De las gráficas obtenidas, notamos que el paciente está atravesando por un proceso de adaptación fisiológica. Las etapas son las siguientes: Recuperación inicial, se caracteriza por un intervalo R-R corto, lo que indica un aumento en la frecuencia cardiaca, en este caso el valor del intervalo es menor a 1 segundo, luego, aparece la etapa de recuperación gradual, una vez experimentada la frecuencia cardiaca alta, esta tenderá a bajar y alcanzar valores normales, por lo que el intervalo R-R aumentará gradualmente. Finalmente, encontramos una etapa estable, en esta parte el intervalo R-R tiende a mantener un valor
+De las gráficas obtenidas, notamos que el paciente está atravesando por un proceso de adaptación fisiológica. Las etapas son las siguientes: Recuperación inicial, se caracteriza por un intervalo R-R corto (ver figura 10), lo que indica un aumento en la frecuencia cardiaca, en este caso el valor del intervalo es menor a 1 segundo, luego, aparece la etapa de recuperación gradual, una vez experimentada la frecuencia cardiaca alta, esta tenderá a bajar y alcanzar valores normales, por lo que el intervalo R-R aumentará gradualmente (ver figura 11). Finalmente, encontramos una etapa estable, en esta parte el intervalo R-R tiende a mantener un valor constante (ver figura 12), indicando que la frecuencia cardiaca se ha normalizado y el paciente ha entrado a un estado basal. 
+Para todos las derivaciones se tiene este mismo comportamiento, por lo que no es necesario el análisis independiente de cada uno. Asimismo, se puede indicar que el corazón del paciente late de manera normal o al menos en los segmentos analizados.
 </p>
+
+| <img src="./Imagenes/figura11.jpg" alt="jumping_jacks" width="200"> |  <img src="./Imagenes/figura12.jpg" alt="jumping_jacks" width="170"> | <img src="./Imagenes/figura12.jpg" alt="jumping_jacks" width="200">|
+| :----: | :-----: | :----:|
+| **Figura 10: Recuperación inicial** | **Figura 11: Recuperación gradual** | **Figura 12: Estado estable**|
 
 <br>
 
@@ -194,7 +199,7 @@ Lo que estamos viendo son las 3 DII y todas son tomadas alrededor de 5 segundos.
 ## **6) Conclusiones**    
 * Al analizar la **DII**, los componentes de una señal de ECG (onda P, segmento ST, complejo QRS y otros) se distinguen mejor en comparación de **DIII** y **DI**.  
 * La frecuencia cardiaca aumenta cuando el usuario hace ejercicio; sin embargo, se observó que este se mantiene ante estado basal y al sostener la respiración.  
-* 
+
 
 ## **7) Referencias**
 1. “Electrocardiogram (ECG or EKG),” Mayoclinic.org, 02-Apr-2024. [Online]. Disponible en: https://www.mayoclinic.org/tests-procedures/ekg/about/pac-20384983.  
@@ -212,13 +217,7 @@ Lo que estamos viendo son las 3 DII y todas son tomadas alrededor de 5 segundos.
 13. A. R. Pérez‐Riera, R. Barbosa‐Barros, R. Daminello‐Raimundo, and L. C. De Abreu, “Main artifacts in electrocardiography,” Annals of Noninvasive Electrocardiology, vol. 23, no. 2, Sep. 2017, doi: 10.1111/anec.12494.  
 14. J. Bronzino, Medical Devices and Systems. Boca Raton, FL, USA: CRC Press, 2006.  
 15. L. Kocsis et al., “Exercise-Induced Electrocardiographic Changes in Healthy Young Males with Early Repolarization Pattern,” Diagnostics, vol. 14, no. 10, p. 980, May 2024, doi: 10.3390/diagnostics14100980.
-<br>
-<br>
-<br>
 
-## Video de prueba
-
-<video scr="https://private-user-images.githubusercontent.com/153067200/369663059-a6b9f70d-8e52-4eb7-bb9e-c318771a2464.mp4"></video>
 
 
 
