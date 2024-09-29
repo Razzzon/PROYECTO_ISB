@@ -102,3 +102,9 @@ Este es un dispositivo de interfaz cerebro-computadora utilizado para la captura
 ## **5) Resultados:**  
 ## **6) Conclusiones:**  
 ## **7) Referencias:**
+  
+<br>
+
+## Video:  
+<video scr="https://github.com/Razzzon/PROYECTO_ISB/issues/1#issue-2554551280.mp4"></video>
+<br>
