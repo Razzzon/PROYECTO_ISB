@@ -16,6 +16,29 @@
 
 ## **1) Introducción** 
 
+### Electroencefalograma
+<p align="justify">
+Un electroencefalograma (EEG) es una herramienta que permite estudiar la actividad eléctrica a nivel cerebral [A6]. Este método es ampliamente utilizado en entornos médicos ya que posee una gran variedad de aplicaciones: estudiar las funciones cerebrales, diagnosticar trastornos neurológicos y analizar cómo responde el cerebro a tareas de distinta complejidad.
+</p>  
+  
+<div align="center">
+   <img src="./Imagenes/eeg.png" alt="EEG" width="400">
+
+**Figura 1: Representación de un EEG**  
+</div>
+<br>
+
+<p align="justify">
+Uno de los aspectos más atractivos de esta técnica es su naturaleza no invasiva, ya que se basa en la colocación de electrodos sobre la cabeza. Estos se encargan de medir el potencial eléctrico desde distintos puntos, lo que a su vez permite cuantificar la actividad de los lóbulos cerebrales. El equipamiento básico de todo este sistema consiste de los electrodos, un amplificador, un monitor y una central de procesamiento (usualmente un computador) [A6].  
+</p>  
+  
+
+<p align="justify">
+Debido a que la cantidad de información está en gran parte dada por la cantidad de electrodos, existe un estándar para la cantidad de estos llamado sistema 10-20, que consta de 21 electrodos situados en la cabeza. Este estándar garantiza una ubicación consistente y reproducible de los electrodos, permitiendo así la comparación de EEGs entre diferentes estudios.
+</p>
+
+
+
 ### OpenBCI
 <p align="justify">  
 Es una empresa enfocada en crear herramientas de código abierto relacionadas a biosensores y a la neurociencia, como interfaz cerebro-máquina (BCI en inglés). Entre los proyectos realizados por OpenBCI se tiene Galea, el cual es una plataforma que incluye hardware y software. Asimismo, incluye mediciones de EEG (electroencefalograma), EMG (electromiograma), EDA (actividad electrodermal), PPG (fotopletismografía) y seguimiento ocular, además que lo combina con inmersión de realidad aumentada y virtual. [WAOS]  
@@ -25,7 +48,7 @@ Es una empresa enfocada en crear herramientas de código abierto relacionadas a 
 <div align="center">
    <img src="./Imagenes/galea.png" alt="Derivaciones" width="350">
 
-**Figura AAA: Imagen de Galea en la tienda de OpenBCI [MIAU]**  
+**Figura 2: Imagen de Galea en la tienda de OpenBCI [MIAU]**  
 </div>
 <br>
 
@@ -36,7 +59,7 @@ Otro de los proyectos realizados por OpenBCI es el Ultracortex, el cual es un di
 <div align="center">
    <img src="./Imagenes/ultracortex.jpg" alt="ultracortex" width="350">
 
-**Figura BBB: Dispositivo Ultracortex Mark IV (para EEG) [GRAJEAS]**  
+**Figura 3: Dispositivo Ultracortex Mark IV (para EEG) [GRAJEAS]**  
 </div>
 <br>
 
@@ -47,7 +70,7 @@ Gracias a que es un dispositivo de código abierto, los usuarios pueden acceder 
 <div align="center">
    <img src="./Imagenes/ejemplo_resultados.jpg" alt="ejemplo usando GUI BCI" width="350">
 
-**Figura CCC: Ejemplo de resultados utilizando la GUI BCI [PAROXÍSTICO]**  
+**Figura 4: Ejemplo de resultados utilizando la GUI BCI [PAROXÍSTICO]**  
 </div>
 <br>
   
@@ -82,7 +105,7 @@ Para todas las actividaes relacionadas con el usó el Bitalino como  sensor y el
 <div align="center">
    <img src="./Imagenes/colocacion_electrodos.png" alt="Colocacion de los electrodos" width="350">
 
-**Colocación de los electrodos [R1]**  
+**Figura 5: Colocación de los electrodos [R1]**  
 </div>
 <br>  
 Posteriormente se realizaron 4 distintas actividades, con el fin de obtener EEG y analizar cómo varían.  
@@ -98,6 +121,51 @@ Este es un dispositivo de interfaz cerebro-computadora utilizado para la captura
 * **P**: +areas parietales
 * **O**: áreas occipitales
 </p>  
+  
+<div align="center">
+   <img src="./Imagenes/ultracortex_electrodos.png" alt="Ultracortex Mark IV y colocación de electrodos" width="350">
+
+**Figura 6: Imagen del Ultracortex Mark IV y tabla de colocación de electrodo-cable para el cyton board (8 canales)**  
+</div>
+<br>  
+  
+<p align="justify">
+Durante la adquisición de la señal, se observa una interfaz donde se muestra la actividad eléctrica de los 8 canales, la Transformada Rápida de Fourier (FFT) y la potencia de las bandas de las bandas de frecuencia de las ondas cerebrales.
+</p>
+  
+<div align="center">
+   <img src="./Imagenes/interfaz.png" alt="Interfaz del BCI" width="350">
+
+**Figura 7: Interfaz gráfica de usuario**  
+</div>
+<br>  
+
+### Actividades:
+* **30s1**
+* **cerrar-abrir con 30s2**
+* **Operaciones matemáticas de nivel fácil y difícil**
+
+<p align="justify">
+Si bien se tienen dos escenarios de operaciones aritméticas de distinta complejidad, la metodología de ambos es igual. Se buscaron 3 preguntas de la página Springerlink y se las preguntó al sujeto de prueba para cada caso, donde primero se le planteó al sujeto de pruebas las preguntas de nivel fácil y luego de nivel difícil. Se le repitió 3 veces cada pregunta y se esperó hasta que respondiera. Este procedimiento se siguió tanto para el caso de la toma de información vía BITalino como con el Ultracortex Mark IV. 
+</p>
+  
+<div align="center">
+   <img src="./Imagenes/facil.png" alt="Preguntas fáciles" width="350">
+
+**Figura F1: Preguntas aritméticas fáciles[R2]**  
+</div>
+<br>
+  
+<div align="center">
+   <img src="./Imagenes/compleja.png" alt="Preguntas complejas" width="350">
+
+**Figura F2: Preguntas aritméticas complejas[R2]**  
+</div>
+<br>
+  
+<p align="justify">
+Respecto al BITalino, una vez obtenidas las señales, se le realizó el procesamiento y posterior lectura de la información mediante el uso de Python. Se le aplicó un filtro pasa banda que contenía el rango de frecuencias de las ondas de interés (desde el 0.5 Hz que es el límite inferior para las ondas delta, hasta 50 Hz que es el límite superior para las ondas gamma)[MUEJEJE]. En el caso del Ultracortex Mark IV, la visualización de los datos se realizó desde el mismo programa.
+</p>
 
 ## **5) Resultados:**  
 ## **6) Conclusiones:**  
