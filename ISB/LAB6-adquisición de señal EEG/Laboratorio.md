@@ -106,4 +106,4 @@ Este es un dispositivo de interfaz cerebro-computadora utilizado para la captura
 <br>
 
 ## Video:  
-<video scr="https://private-user-images.githubusercontent.com/153067200/371811305-afb72296-bd77-4927-a573-65ae64664783.mp4"></video>
+<video scr="https://github.com/Razzzon/PROYECTO_ISB/issues/1#issue-2554551280"></video>
