@@ -922,7 +922,11 @@ En cuanto al filtro FIR de ventana rectangular, este es de orden 3 y con la mism
 ## **Referencias bibliográficas**
 
 <div align="justify">
-1. C. Saxena, A. Sharma, R. Srivastav, and H. K. Gupta, "Denoising of ECG Signals Using FIR & IIR Filter: A Performance Analysis," *International Journal of Engineering & Technology*, vol. 7, no. 4.12, pp. 1-5, 2018\. \[Online\]. Available: [www.sciencepubco.com/index.php/IJET](http://www.sciencepubco.com/index.php/IJET).  
-2. National Instruments, "FIR and IIR Filters," *NI Documentation*, 2024\. \[Online\]. Available: [https://www.ni.com/docs/en-US/bundle/diadem/page/genmaths/genmaths/calc\_filterfir\_iir.htm](https://www.ni.com/docs/en-US/bundle/diadem/page/genmaths/genmaths/calc_filterfir_iir.htm)  
-3. J. Bronzino, Medical Devices and Systems. Boca Raton, FL, USA: CRC Press, 2006\.
+  [1] C. Saxena, A. Sharma, R. Srivastav, and H. K. Gupta, "Denoising of ECG Signals Using FIR & IIR Filter: A Performance Analysis," *International Journal of Engineering & Technology*, vol. 7, no. 4.12, pp. 1-5, 2018. [Online]. Available: www.sciencepubco.com/index.php/IJET.
+
+  [2] National Instruments, "FIR and IIR Filters," NI Documentation, 2024. [Online]. Available: https://www.ni.com/docs/en-US/bundle/diadem/page/genmaths/genmaths/calc_filterfir_iir.htm
+
+  [3] J. Bronzino, Medical Devices and Systems. Boca Raton, FL, USA: CRC Press, 2006.
+
+</div>
 
