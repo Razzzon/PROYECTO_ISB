@@ -32,73 +32,58 @@ Q = 30  # Factor de calidad
 b, a = signal.iirnotch(f0, Q, fs)
 ```
 <div align="center">
-   <img src="./Img_LAB7/zplane_FIR_pasa_altos.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/zplane_FIR_pasa_altos.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/Bode_FIR_pasa_altos.PNG" alt="Derivaciones" width="350">
 
-**Figura 1: Diagrama de polos y ceros del filtro FIR pasa-altos**  
+**Figura 1: Diagrama de polos y ceros y Diagrama de Bode del filtro FIR pasa-altos**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/Bode_FIR_pasa_altos.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/Bode_FIR_pasa_altos.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/Bode_FIR_pasa_banda.PNG" alt="Derivaciones" width="350">
 
-**Figura 2: Diagrama de Bode del filtro FIR pasa-altos**  
+**Figura 2: Diagrama de polos y ceros y Diagrama de Bode del filtro FIR pasa-banda**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/zplane_FIR_pasa_bandas.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/zplane_FIR_pasa_bandas.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/Bode_IIR_Notch.PNG" alt="Derivaciones" width="350">
 
-**Figura 3: Diagrama de polos y ceros del filtro FIR pasa-banda**  
+**Figura 3: Diagrama de polos y ceros y Diagrama de Bode del filtro IIR Notch**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/Bode_FIR_pasa_banda.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/EMG_original.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_original.PNG" alt="Derivaciones" width="350">
 
-**Figura 4: Diagrama de Bode del filtro FIR pasa-banda**  
+**Figura 4: Análisis de la señal original en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/zplane_IIR_Notch.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/EMG_pasa_alta.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_filtro_pasa_alto.PNG" alt="Derivaciones" width="350">
 
-**Figura 5: Diagrama de polos y ceros del filtro IIR Notch**  
+**Figura 5: Análisis de la señal filtrada con el filtro FIR pasa-alto en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/Bode_IIR_Notch.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/EMG_pasa_banda.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_filtro_pasa_banda.PNG" alt="Derivaciones" width="350">
 
-**Figura 6: Diagrama de Bode del filtro IIR Notch**  
+**Figura 6: Análisis de la señal filtrada con el filtro FIR pasa-banda en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/EMG_original.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/EMG_notch.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_filtro_notch.PNG" alt="Derivaciones" width="350">
 
-**Figura 7: Análisis de la señal original en dominio del tiempo**  
-</div>
-<br>
-
-
-<div align="center">
-   <img src="./Img_LAB7/EMG_pasa_alta.png" alt="Derivaciones" width="350">
-
-**Figura 8: Análisis de la señal filtrada con el filtro FIR pasa-alto en dominio del tiempo**  
-</div>
-<br>
-
-<div align="center">
-   <img src="./Img_LAB7/EMG_pasa_banda.png" alt="Derivaciones" width="350">
-
-**Figura 9: Análisis de la señal filtrada con el filtro FIR pasa-banda en dominio del tiempo**  
-</div>
-<br>
-
-<div align="center">
-   <img src="./Img_LAB7/EMG_notch.png" alt="Derivaciones" width="350">
-
-**Figura 10: Análisis de la señal filtrada con el filtro IIR Notch en dominio del tiempo**  
+**Figura 7: Análisis de la señal filtrada con el filtro IIR Notch en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
@@ -135,73 +120,59 @@ b_high = signal.firwin(numtaps_high, cutoff_high, fs=fs, pass_zero=False)
 ```
 
 <div align="center">
-   <img src="./Img_LAB7/zplane_ecg_low.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/zplane_ecg_low.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/Bode_ecg_low.PNG" alt="Derivaciones" width="350">
 
-**Figura 10: Diagrama de polos y ceros del filtro FIR pasa-bajas**  
+**Figura 8: Diagrama de polos y ceros y Diagrama de Bode del filtro FIR pasa-bajas**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/Bode_ecg_low.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/zplane_ecg_notch.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/Bode_ecg_notch.PNG" alt="Derivaciones" width="350">
 
-**Figura 11: Diagrama de Bode del filtro FIR pasa-bajas**  
+**Figura 9: Diagrama de polos y ceros y Diagrama de Bode del filtro IIR Notch**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/zplane_ecg_notch.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/zplane_ecg_high.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/Bode_ecg_high.PNG" alt="Derivaciones" width="350">
 
-**Figura 12: Diagrama de polos y ceros del filtro IIR Notch**  
+**Figura 10: Diagrama de polos y ceros y Diagrama de Bode del filtro FIR pasa-altas**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/Bode_ecg_notch.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/ecg_original.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_ecg_original.PNG" alt="Derivaciones" width="350">
 
-**Figura 13: Diagrama de Bode del filtro IIR Notch**  
+**Figura 11: Análisis de la señal original en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/zplane_ecg_high.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/ecg_low.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_ecg_notch.PNG" alt="Derivaciones" width="350">
 
-**Figura 14: Diagrama de polos y ceros del filtro FIR pasa-altas**  
+**Figura 12: Análisis de la señal filtrada con el filtro FIR pasa-bajas en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
 <div align="center">
-   <img src="./Img_LAB7/Bode_ecg_high.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/ecg_notch.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_ecg_notch.PNG" alt="Derivaciones" width="350">
 
-**Figura 15: Diagrama de Bode del filtro FIR pasa-altas**  
+**Figura 13: Análisis de la señal filtrada con el filtro IIR Notch en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
 
 <div align="center">
-   <img src="./Img_LAB7/ecg_original.png" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/ecg_high.PNG" alt="Derivaciones" width="350">
+   <img src="./Img_LAB7/fft_ecg_high.PNG" alt="Derivaciones" width="350">
 
-**Figura 16: Análisis de la señal original en dominio del tiempo**  
-</div>
-<br>
-
-<div align="center">
-   <img src="./Img_LAB7/ecg_low.png" alt="Derivaciones" width="350">
-
-**Figura 17: Análisis de la señal filtrada con el filtro FIR pasa-bajas en dominio del tiempo**  
-</div>
-<br>
-
-<div align="center">
-   <img src="./Img_LAB7/ecg_notch.png" alt="Derivaciones" width="350">
-
-**Figura 18: Análisis de la señal filtrada con el filtro IIR Notch en dominio del tiempo**  
-</div>
-<br>
-
-<div align="center">
-   <img src="./Img_LAB7/ecg_high.png" alt="Derivaciones" width="350">
-
-**Figura 19: Análisis de la señal filtrada con el filtro FIR pasa-bajas en dominio del tiempo**  
+**Figura 14: Análisis de la señal filtrada con el filtro FIR pasa-bajas en dominio del tiempo y la frecuencia**  
 </div>
 <br>
 
