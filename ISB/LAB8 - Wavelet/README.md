@@ -768,7 +768,11 @@ Asimismo, el rendimiento del filtrado de señales EEG tiene buen rendimiento al 
 
 ![png](imagenes/tabla_wavelets.png)
 <div align="center">
+<<<<<<< HEAD
 
+=======
+  <img src="imagenes/tabla_wavelets.png" alt="Tabla de rendimiento de Wavelets" width="700">
+>>>>>>> 8f9a88fd88ae0c750343d22e98b09699a2ab0790
   
 **Rendimiento del filtrado de señales EEG según Wavelet Madre [15]**
 </div>
