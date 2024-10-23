@@ -764,13 +764,15 @@ Analizando las gráficas (cruda vs filtradas), visualmente es posible identifica
 Asimismo, el rendimiento del filtrado de señales EEG tiene buen rendimiento al usarse el wavelet madre db1 [15], tal y como se muestra en la siguiente tabla:
 </p>
 
+
+
+![png](imagenes/tabla_wavelets.png)
 <div align="center">
-  <img src="/imagenes/tabla_wavelets.png" alt="Tabla de rendimiento de Wavelets" width="700">
+
   
 **Rendimiento del filtrado de señales EEG según Wavelet Madre [15]**
 </div>
 <br>
-
 <p align="justify">
 Además, se menciona la utilidad de utilizar la wavelet madre <i>db1</i> para el filtrado de señales EEG contaminadas por ruido ocular, lo que podría explicar tener un valor mayor de SNR, comparado con los valores obtenidos en ambos basales (reposo y respiración tranquila). 
 Por otro lado, se explica, en otras fuentes, la utilidad de utilizar parámetros como <i>hard-rigrsure</i> para filtrar señales EEG cuando la persona está realizando tareas mentales aritméticas, en el que alcanzan valores de SNR mayores a 40 dB [16]. Esto tiene sentido, puesto que esta configuración (parámetros) tiene la capacidad de capturar las transiciones que son rápidas, además de la eliminación de coeficientes pequeños (uso del umbral <i>hard</i>), lo que lo hace eficaz ante manejo de señales con frecuencias altas.
