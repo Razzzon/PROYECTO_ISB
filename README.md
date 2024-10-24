@@ -5,9 +5,6 @@
 - [Participantes](#participantes)
 - [Docentes](#docentes)
 
-# Laboratorio 3
-https://www.canva.com/design/DAGP0LxzG-8/GWDhETQnuqnMppvaMXWDpw/edit?utm_content=DAGP0LxzG-8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
-
 ## Participantes
 - [Rogger Anthony Huaman Gonzales](Otros/INTEGRANTES_IMAGENES/ROGGER.jpg) (colaborador) ► rogger.huaman@upch.pe
 - [Alejandro Javier Rosas Gonzalez Zuñiga](Otros/INTEGRANTES_IMAGENES/alejandro.jpg) (colaborador) ► alejandro.rosas@upch.pe
