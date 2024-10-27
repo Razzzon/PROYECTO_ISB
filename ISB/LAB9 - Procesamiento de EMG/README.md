@@ -1,7 +1,4 @@
-<p style="text-align: center; font-size: 35px; font-weight: bold;">
-    Lab 9: Manejo de señales EMG
-</p>
-
+# LAB 9: PROCESAMIENTO DE SEÑALES EMG
 
 #### **Tabla de Contenido**
 
