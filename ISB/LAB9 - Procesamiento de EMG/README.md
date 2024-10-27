@@ -1,6 +1,7 @@
-<p style="text-align: center;font-size:50px">
- Lab 9: Manejo de señales EMG
+<p style="text-align: center; font-size: 35px; font-weight: bold;">
+    Lab 9: Manejo de señales EMG
 </p>
+
 
 #### **Tabla de Contenido**
 
@@ -788,7 +789,7 @@ print(df)
 
 ## Bibliografía:
 
-[1] N. Burhan, M. Kasno and R. Ghazali, "Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review," 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS), Selangor, Malaysia, 2016, pp. 141-146, doi: 10.1109/I2CACIS.2016.7885304.
+[1] N. Burhan, M. Kasno and R. Ghazali, "Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review" 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS), Selangor, Malaysia, 2016, pp. 141-146, doi: 10.1109/I2CACIS.2016.7885304.
 
 [2] R. B. Azhiri, M. Esmaeili, y M. Nourani, "EMG-Based Feature Extraction and Classification for Prosthetic Hand Control," Department of Mechanical Engineering, University of Texas at Dallas, 2021.
 
@@ -798,7 +799,7 @@ print(df)
 
 ## Anexos  
 
-### Funciones para la lectura, gráfica y obtener SNR de las señales
+### Funciones para la lectura y gráfica
 
 
 ```python
