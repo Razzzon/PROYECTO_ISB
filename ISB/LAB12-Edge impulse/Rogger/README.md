@@ -193,7 +193,7 @@ print(f"Datos guardados")
 -  Para este caso si se desea poner un limite para seccionar la señal le pones el limite a trabajar, para el ejemplo esta de 5000 ms (5 segundos)
 
 <div style="display:flex; justify-content: center;align-itms: center;">
-    <img src= "Pasar de txt a csv/imagenes/12.png" alt="Imagen 12 " style ="width :500px;margin-right:10px;" > 
+    <img src= "Pasar de txt a csv/Imagenes/12.png" alt="Imagen 12 " style ="width :500px;margin-right:10px;" > 
     
 </div>
 
