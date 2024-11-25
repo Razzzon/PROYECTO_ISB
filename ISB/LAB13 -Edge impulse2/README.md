@@ -57,7 +57,7 @@ Estas salidas permiten identificar el estado fisiológico representado por las s
 
 </P>
 
-![ima1](/ROGGER/IMAGENES/1.png)
+![ima1](/IMAGENES/1.png)
 <p align ="center" style="font-size: 10px; ">Imagen1: Diseño del impulso </p>
 
 ---
@@ -82,7 +82,7 @@ Para mejorar la interpretación de los resultados, la opción <b>Take log of spe
 En conjunto, esta configuración está optimizada para extraer información relevante de señales de ECG con alta precisión. Los parámetros seleccionados aseguran un análisis espectral eficiente, preservando las características esenciales de la señal mientras se mantiene la capacidad de implementar este procesamiento en dispositivos embebidos o sistemas de IoT. Estas características, combinadas con configuraciones específicas como la superposición de ventanas y la resolución mejorada en frecuencias bajas, hacen que esta configuración sea ideal para tareas como la clasificación de ritmos cardíacos, detección de arritmias y monitoreo de estados fisiológicos en tiempo real.
 </p>
 
-![ima2](/ROGGER/IMAGENES/2.png)
+![ima2](/IMAGENES/2.png)
 <p align ="center" style="font-size: 10px; ">Imagen2: Spectral features </p>
 
 <p align="justify">
@@ -90,7 +90,7 @@ Segun la imagen 3 se observa que al extraer las características, se ha formado 
 Además las principales características son a bajas frecuencias como el Spectral Power 1.37 - 1.76 Hz
 </p>
 
-![ima3](/ROGGER/IMAGENES/3.png)
+![ima3](/IMAGENES/3.png)
 <p align ="center" style="font-size: 10px; ">Imagen3: Generate features </p>
 ---
 
@@ -163,7 +163,7 @@ La arquitectura está diseñada para extraer patrones de las 256 característica
 - **F1 Score Promedio:** `0.94`  
   Un equilibrio sólido entre precisión y recall.
 
-![ima4](/ROGGER/IMAGENES/4.png)
+![ima4](/IMAGENES/4.png)
 <p align ="center" style="font-size: 10px; ">Imagen4: Clasificación </p>
 
 
@@ -177,7 +177,7 @@ La arquitectura está diseñada para extraer patrones de las 256 característica
 
 El modelo (imagen 5) de clasificación presenta un desempeño moderado con una precisión global del 68.42%, lo que sugiere limitaciones para generalizar correctamente sobre los datos de prueba. Este rendimiento está afectado principalmente por la alta similitud entre las señales de las clases "basal" y "respiración", lo que dificulta su diferenciación. Aunque las métricas como el área bajo la curva ROC (0.68) y el F1 Score (0.65) reflejan un desempeño aceptable, indican que el modelo tiene margen de mejora en precisión.
 
-![ima5](/ROGGER/IMAGENES/5.png)
+![ima5](/IMAGENES/5.png)
 <p align ="center" style="font-size: 10px; ">Imagen5: Testeo </p>
 
 
@@ -198,6 +198,6 @@ El análisis detallado de la matriz de confusión arroja información clave sobr
 
 El desempeño del modelo en "ejercicio" es sólido, pero los resultados en "basal" y "respiración" sugieren que las características extraídas no son suficientes para distinguir eficazmente estas dos clases. Además, hay indicios de **sobreajuste** en el modelo, ya que parece estar demasiado ajustado a los patrones específicos del conjunto de entrenamiento en lo que son las señales de basal y respiración.
 
-
+link : https://studio.edgeimpulse.com/public/558601/live 
 
 
