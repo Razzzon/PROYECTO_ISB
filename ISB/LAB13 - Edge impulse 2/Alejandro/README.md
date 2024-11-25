@@ -1,152 +1,91 @@
-<p align=center style ="font-size:33px;"> 
-<b> LAB 12: IMPORTACION DE DATA A EDGE IMPULSE </b>
+<p align=center style ="font-size:43px;"> 
+<b> LAB 13: IMPORTACION DE DATA A EDGE IMPULSE </b>
  </p>
 
-En el presente entregable, se describirá la metodología seguida para poder subir data a la plataforma Edge Impulse. La data que se subira será, en este caso, la obtenida en el Laboratorio 5, donde se extrajeron señales de ECG (3 derivadas bipolares) para tres estados en particular:
+En el presente entregable, se describirá la metodología seguida para poder procesar la data que fue subida en el Laboratorio 12. Esta data será procesada por un algoritmo de aprendizaje que se implementa via Edge Impulse, donde podremos configurar ciertos parametros a traves de una intefaz amigable para el usuario. Recordemos que, para este caso, tenemos en nuestro dataset tres categorías de señales, las cuales corresponden a los siguientes estados:
 
 - Reposo
 - Aguantando la respiración por 10 segundos
 - Inmediatamente después de 5 minutos continuos de ejercicio predominantemente aeróbico.
 
-La información de estas señales fue captada gracias al uso del Kit BITalino junto a sus electrodos. A continuación, se detallarán los pasos seguidos, desde la conversión de los archivos captados por el BITalino al formato adecuado para la subida, hasta el split de data entre *training* y *test*.
-
-### **Conversión de archivos .txt a CSV**
-La data obtenida del BITalino es guardada de forma automática en formato .txt. En ocasiones, este tipo de formato puede generar problemas al momento de subir a Edge Impulse, tal cual se vio durante el desarrollo de la sesión de laboratorio. Es debido a esto que como primer paso, se opto por convertir toda la data de .txt a .csv, formato el cual no presenta problema alguno para la subida.
-
-Para la conversión, se implemento el siguiente código en forma de función. Este permite eliminar columnas y filas indeseadas para tener un .csv con solo la información pertinente.
-
-
-```python
-import numpy as np
-
-def datos_a_CSV(data):
-    # Abrir el archivo de texto
-    with open(data, "r") as f:
-        # Saltar las tres primeras líneas
-        next(f)
-        next(f)
-        next(f)
-        
-        # Leer todas las líneas restantes
-        all_data = f.readlines()   
-    
-    # Procesar cada línea, dividiendo por tabulaciones
-    all_data = [line.strip().split('\t') for line in all_data]
-    
-    # Extraer la primera columna (muestra)
-    sample = [int(row[0]) for row in all_data]  # Primera columna
-   
-    # Extraer la sexta columna (amplitud)
-    amplitude = [int(row[5]) for row in all_data]  # Sexta columna (índice 5)
-    amplitude = np.array(amplitude)
-
-    with open("data1.csv", "w") as f: #Se puede cambiar el nombre data1 por cualquier otro, solo será el nombre del archivo .csv generado
-        for s, a in zip(sample, amplitude):
-            f.write(f"{s}; {a}\n") #Datos separados por ;
-```
-
-A continuación, se muestra un ejemplo de uso de la función. Asimismo, todos los archivos .csv obtenidos se encuentran en la carpeta *Datos en formato CSV*, dentro de la subcarpeta personal (*Alejandro*) de este laboratorio.
-
-
-```python
-datos_a_CSV("reposo1.txt") #reposo1.txt puede ser reemplazado por cualquier otro archivo .txt proveniente del BITalino.
-```
-
-En la siguiente imágen, podemos ver que se obtuvieron 9 archivos .csv, producto de que para cada uno de los 3 estados tenemos 3 derivadas. El que representa cada archivo se define por lo siguiente:
-
-- data1 a data3: reposo, representando de la primera a tercera derivada (en ese orden)
-- data4 a data6: ejercicio, representando de la primera a tercera derivada (en ese orden)
-- data7 a data9: aguantar la respiración, representando de la primera a tercera derivada (en ese orden)
+Los nombres para cada uno son *reposo*, *respiracion* y *ejercicio* respectivamente. 
 
 <div align="center">
-  <img src="./imagenes/files.png" height = "350" width="600"><p>
+  <img src="./imagenes/dataset.png"><p>
 
-  **Figura 1: Archivos creados con la data**
+  **Figura 1: Dataset creado en el Laboratorio 12**
   </p>
 </div>
 <br>
 
-### **Creación de proyecto y configuraciones en Edge Impulse**
-Teniendo ya la data convertida, se procedió a crear un nuevo proyecto en Edge Impulse llamado *Lab12_EdgeImpulse*. Se muestra una imagen del dashboard del proyecto.
+
+### **Creación de un Impulso**
+El primer paso para poder testear un algoritmo de aprendizaje mediante Edge Impulse es la creación de un Impulso. Este permite tomar la data subida en crudo, extraer las características mediante distintos métodos de procesamiento de señales y finalmente hacer uso de un bloque de aprendizaje para poder categorizar la información en base a las categorías definidas en el dataset.
+
+A continuación, se muestra el Impulso creado. Nótese que se añadió el bloque de procesamiento *Spectral Analysis* y e bloque de aprendizaje *Clasification*. El bloque de procesamiento es el encargado de extraer las características de nuestra señal, trasladandola al dominio de la frecuencia, mientras que el bloque de aprendizaje, como se menciono anteriormente, será el que finalmente decida cual de los tres tipos de señal es.
 
 <div align="center">
-  <img src="./imagenes/dashboard.png" height = "300" width="600"><p>
+  <img src="./imagenes/img1.png"><p>
 
-  **Figura 2: Dashboard de Lab12_EdgeImpulse**
+  **Figura 2: Visualización del impulso creado junto a sus bloques**
   </p>
 </div>
 <br>
 
-Se configuro la subida y leída de archivos mediante la herramiente CSV Wizard de Edge Impulse. En primera instancia, se subio el archivo modelo para el CSV Wizard. Este archivo debe tener una disposición de los datos igual al resto de datos que serán subidos más adelante para que Edge Impulse sepa como leerlos y que data rescatar. Se configuro como separador (delimiter) al ";", ya que así se implemento el código de conversión del archivo de texto.
+Habiendo creado el impulso, el paso siguiente es configurar algunos parametros de los bloques.
+
+
+### **Configuración de Spectral Features y Classifier**
+En el aparto de *Spectral Features*, se configuraron ciertos valores para que el algoritmo tenga un punto de referencia acerca de cómo realizar el análisis. Entre los valores que se pueden configurar figuran dos grandes categorías: *Filter* y *Analysis*. Se optó por dejar *Filter* vacio para que la data trabajada sea tal cual la que se capto por el kit BITalino. Respecto a *Analysis*, se configuro que se aplique un análisis del tipo FFT, ya que al comparar con el análisis via wavelet, FFT obtenia mejor rendimiento. De igual manera, se establecio que el número de puntos de la FFT sea de 1024.
 
 <div align="center">
-  <img src="./imagenes/step2.png" height = "300" width="600"><p>
+  <img src="./imagenes/spectral.png"> <p>
 
-  **Figura 3: Configuración del separador y cabeceras**
+  **Figura 3: Valores establecidos para Spectral Features**
   </p>
 </div>
 <br>
 
-Posterior a esto, se configuro que la data era de series temporales, al igual que la frecuencia de muestreo de 1000 Hz (esta es la frecuencia con la que trabaja el BITalino). 
-
-<div align="left">
-  <img src="imagenes/step3.1.png" width="45%" style="display: inline-block;">
-  <img src="imagenes/step3.2.png" width="45%" style="display: inline-block;">
-
-  <p style="text-align: center;"><strong>Figura 4: Configuración de hecha en el paso 3 de CSV Wizard</strong></p>
-</div>
-<br>
-
-Se selecciona la columna que contiene los datos en el CSV. En este caso, se selecciono la columna *Unnamed2* ya que esta contiene los valores de amplitud de la señal ECG.
+Esto nos dio la siguiente distribución de características en el *Feature explorer*.
 
 <div align="center">
-  <img src="./imagenes/step4.png" height = "300" width="600"><p>
+  <img src="./imagenes/explorer.png"> <p>
 
-  **Figura 5: Selección de columna de interés**
+  **Figura 4: Feature explorer en base a los valores establecidos anteriormente**
   </p>
 </div>
 <br>
 
-Finalmente, para poder preservar la uniformidad de los datos, se opto por establecer una longitud para cada serie de datos. En este caso, se eligió que cada serie de datos tenga una longitud de 10 segundos.
+
+Pasando ahora a *Classifier*, en este apartado podemos establecer distintos parametros para la red neuronal que será la encargada de clasificar la información. Los parametros a destacar aquí son el número de ciclos de entrenamiento, la tasa de aprendizaje y la arquitectura neuronal. Respecto al número de ciclos de entrenamiento, se opto por elegir un valor ligeramente superior al default: se configuro el número de ciclos a 150. Respecto a la tasa de aprendizaje, se dejo en el valor por defecto de 0.0005. Finalmente, en cuanto a la arquitectura neuronal, se crearon tres capas densas para poder ir extrayendo las características. La primera capa es la de mayor cantidad de neuronas (100) ya que de esta forma podemos captar en gran medida las características generales al inicio. Las siguientes capas tienen un número considerablemente menor ya que a medida que avanzamos, se requiere mayor finura. Las características generales aprendidas en las capas iniciales ahora son sintetizadas para poder representar características específicas, por lo que lo adecuado sería un menor número de neuronas. 
+
+Finalmente, aquí también podemos efectuar el entrenamiento del modelo.
 
 <div align="center">
-  <img src="./imagenes/step5.png" height = "300" width="600"><p>
+  <img src="imagenes/neural.png" width="45%" style="display: inline-block;">
+  <img src="imagenes/train.png" width="45%" style="display: inline-block;">
 
-  **Figura 6: Longitud de los segmentos de datos**
+  <p style="text-align: center;"><strong>Figura 5: Configuración de la red neuronal y los resultados del entrenamiento</strong></p>
+</div>
+<br>
+
+Se puede ver que el modelo obtiene un accuracy de 68.8%, lo cual es relativamente bajo. Sin embargo, este problema entra dentro de lo esperado por la extensión limitada del dataset.
+
+
+### **Testeo del modelo**
+Habiendo culminado el entrenamiento del modelo, lo último sería realizar el testeo del modelo. Los resultados del testeo se pueden apreciar en *Model testing*, dentro del menú desplegable de *Impulse design*.
+
+<div align="center">
+  <img src="./imagenes/test.png"><p>
+
+  **Figura 6: Resultados del testeo del modelo**
   </p>
 </div>
 <br>
 
-A continuación, se muestra una imagen de la configuración ya terminada e implementada en el CSV Wizard.
+Vemos que para el testeo se obtuvo un accuracy de 50%, lo cual es aún más bajo que los resultados para el entrenamiento. Nuevamente, el factor limitante es la extensión del dataset, ya que una mayor cantidad de muestras pudo haber resultado en un mejor aprendizaje por parte de la red neuronal. Igualmente, otra configuración o combinación de parametros puedo haber ayudado a elevar el porcentaje. Pese a esto, es destacable el rendimiento de la red neuronal para tan poca data disponible, ya que las redes neuronales trabajan con miles de datos el momento de entrenarse.
 
-<div align="center">
-  <img src="./imagenes/CSV Wizard config final.png" height = "300" width="600"><p>
-
-  **Figura 7: Configuración finalizada en CSV Wizard**
-  </p>
-</div>
-<br>
-
-### **Subida de data**
-Habiendo configurado el CSV Wizard, se realizó la subida de archivos. Se subieron los archivos en grupos de tres, donde cada grupo corresponde a un estado. Los 9 archivos no se suben en conjunto debido a que cada grupo de tres corresponde a un estado, por lo que tienen etiquetas diferentes. Se muestra en la imagen un ejemplo de la subida en conjunto de archivos bajo la misma etiqueta. Este proceso se hizo para la data de los otros dos estados restantes.
-
-<div align="center">
-  <img src="./imagenes/upload.png" height = "300" width="600"><p>
-
-  **Figura 8: Subida de los tres archivos con data del estado en reposo**
-  </p>
-</div>
-<br>
-
-Al subir todos los archivos, se pudo apreciar que Edge Impulse separo correctamente la data en segmentos de 10 segundos de duración. No obstante, habia segmentos de menor longitud ya que la longitud total de las señales no siempre eran múltiplos de 10. Esto ocasiono que la data no estuviera correctamente distribuida entre *training* y *test*, sumado a que habia estados con más data que otros por la mayor cantidad de segmentos. Para solventar esto, se eliminaron los segmentos menores a 10 segundos, al igual que mover algunas señales entre *training* y *test* para lograr un balanceo adecuado. Finalmente, se obtuvo lo siguiente.
-
-<div align="center">
-  <img src="./imagenes/dataset.png" height = "300" width="600"><p>
-
-  **Figura 9: Dataset generado tras los ajustes adicionales**
-  </p>
-</div>
-<br>
+Destaca que el modelo pudo identificar con mayor facilidad la data correspondiente a *ejercicio* (65%) cuando realmente pertenecia a esta categoría. Por otro lado, parece ser que la categoría que más se le dificulto detectar fue la de *respiracion*, lo cual se puede ver ya que hay un bajo porcentaje de acierto, en particular, el modelo le costo distinguir entre *respiracion* y *reposo*: error del 40%.
 
 ### **Enlace al proyecto de Edge Impulse**
-Para poder visualizar al proyecto creado y al dataset, acceder al siguiente enlace: https://studio.edgeimpulse.com/public/558182/live
+Para poder visualizar el proyecto, acceder al siguiente enlace: https://studio.edgeimpulse.com/public/558182/live
