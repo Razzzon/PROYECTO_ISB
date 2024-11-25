@@ -11,49 +11,49 @@
 
 ## Introducción
 <p align="justify">
-Este laboratorio da continuidad al Lab 12, cuyo propósito era subir señales de ECG al entorno de Edge Impulse. En esta ocasión, se trabajará en el diseño de un modelo capaz de diferenciar entre tres tipos de señales de ECG: basales, respiración de 10 segundos y post ejercicio.
+ Este laboratorio da continuidad al Lab 12, cuyo propósito era subir señales de ECG al entorno de Edge Impulse. En esta ocasión, se trabajará en el diseño de un modelo capaz de diferenciar entre tres tipos de señales de ECG: basales, respiración de 10 segundos y post ejercicio.
 
-Las señales utilizadas provienen del dispositivo Bitalino, capturadas a una frecuencia de muestreo de 1000 Hz. Para su procesamiento, se realizaron ajustes importantes: se dividieron en segmentos de 10 segundos de duración y se aplicó un filtro Butterworth pasabanda de 0.5 Hz a 100 Hz. En las siguientes secciones, se explicará la razón detrás de estos ajustes y su impacto en el análisis y modelado de datos.
+ Las señales utilizadas provienen del dispositivo Bitalino, capturadas a una frecuencia de muestreo de 1000 Hz. Para su procesamiento, se realizaron ajustes importantes: se dividieron en segmentos de 10 segundos de duración y se aplicó un filtro Butterworth pasabanda de 0.5 Hz a 100 Hz. En las siguientes secciones, se explicará la razón detrás de estos ajustes y su impacto en el análisis y modelado de datos.
 </p>
 ---
 
 ## Impulse Design
 
 <P align="justify">
-Configuración del *Impulse* en Edge Impulse
+ Configuración del *Impulse* en Edge Impulse
 
-En esta sección, se detalla cómo configurar el *Impulse*, que constituye la estructura fundamental de un modelo en **Edge Impulse**. Se describen las etapas de procesamiento de datos, extracción de características y selección de bloques de aprendizaje, adaptadas a señales fisiológicas como ECG, respiración basal y post-ejercicio de una persona sana.
+ En esta sección, se detalla cómo configurar el *Impulse*, que constituye la estructura fundamental de un modelo en **Edge Impulse**. Se describen las etapas de procesamiento de datos, extracción de características y selección de bloques de aprendizaje, adaptadas a señales fisiológicas como ECG, respiración basal y post-ejercicio de una persona sana.
 
-Dado que las señales analizadas son de 10 segundos de duración, la característica más evidente y reconocible visualmente es la cantidad de latidos por minuto (LPM). Este tipo de datos temporales con duraciones más largas resulta ideal para que el modelo pueda diferenciar patrones de manera efectiva.
-
-
-
-### **Time Series Data**
-En este paso, se configura la ventana de análisis y el incremento entre ventanas. Para las señales de 10 segundos, se considera adecuado un tamaño de ventana de **8000 ms** con un incremento de **1000 ms**. Esta configuración equilibra el nivel de detalle con la capacidad de capturar patrones significativos en los datos.
-
-
-### **Bloques de Procesamiento**
-Un **bloque de procesamiento** en Edge Impulse es una etapa donde los datos en bruto se transforman en representaciones más útiles para el aprendizaje automático. Estos bloques extraen características importantes y reducen la complejidad de los datos, lo que facilita que el modelo identifique patrones y tendencias relevantes.
-
-#### **Spectral Analysis**
-Este bloque analiza patrones repetitivos, lo cual lo hace particularmente adecuado para señales como las de ECG. Además, extrae características en el dominio de la frecuencia, permitiendo una mejor representación de las señales periódicas y sus componentes armónicos. Esto es crucial para identificar variaciones significativas como las asociadas a diferentes estados de actividad fisiológica.
-
----
-
-### **Bloques de Aprendizaje: Classification**
-Un **bloque de aprendizaje** es una etapa donde el modelo utiliza las características procesadas para generar predicciones. En este caso, al contar con etiquetas claras (basales, respiración post-ejercicio, etc.), se puede emplear un modelo de clasificación para distinguir entre los tres tipos de señales ECG. 
-
-La clasificación es adecuada porque busca asociar cada conjunto de características a una categoría específica, logrando así segmentar los datos de manera efectiva y precisa.
+ Dado que las señales analizadas son de 10 segundos de duración, la característica más evidente y reconocible visualmente es la cantidad de latidos por minuto (LPM). Este tipo de datos temporales con duraciones más largas resulta ideal para que el modelo pueda diferenciar patrones de manera efectiva.
 
 
 
-### **Output Features**
-El modelo produce salidas correspondientes a los tres tipos de señales descritos: 
-1. **Señales de ECG basal**  
-2. **Señales de respiración de 10 segundos**  
-3. **Señales post-ejercicio**
+ ### **Time Series Data**
+ En este paso, se configura la ventana de análisis y el incremento entre ventanas. Para las señales de 10 segundos, se considera adecuado un tamaño de ventana de **8000 ms** con un incremento de **1000 ms**. Esta configuración equilibra el nivel de detalle con la capacidad de capturar patrones significativos en los datos.
 
-Estas salidas permiten identificar el estado fisiológico representado por las señales y facilitan su análisis para aplicaciones prácticas como monitoreo de salud o análisis deportivo.
+
+ ### **Bloques de Procesamiento**
+ Un **bloque de procesamiento** en Edge Impulse es una etapa donde los datos en bruto se transforman en representaciones más útiles para el aprendizaje automático. Estos bloques extraen características importantes y reducen la complejidad de los datos, lo que facilita que el modelo identifique patrones y tendencias relevantes.
+
+ #### **Spectral Analysis**
+ Este bloque analiza patrones repetitivos, lo cual lo hace particularmente adecuado para señales como las de ECG. Además, extrae características en el dominio de la frecuencia, permitiendo una mejor representación de las señales periódicas y sus componentes armónicos. Esto es crucial para identificar variaciones significativas como las asociadas a diferentes estados de actividad fisiológica.
+
+ ---
+
+ ### **Bloques de Aprendizaje: Classification**
+ Un **bloque de aprendizaje** es una etapa donde el modelo utiliza las características procesadas para generar predicciones. En este caso, al contar con etiquetas claras (basales, respiración post-ejercicio, etc.), se puede emplear un modelo de clasificación para distinguir entre los tres tipos de señales ECG. 
+
+ La clasificación es adecuada porque busca asociar cada conjunto de características a una categoría específica, logrando así segmentar los datos de manera efectiva y precisa.
+
+
+
+ ### **Output Features**
+ El modelo produce salidas correspondientes a los tres tipos de señales descritos: 
+ 1. **Señales de ECG basal**  
+ 2. **Señales de respiración de 10 segundos**  
+ 3. **Señales post-ejercicio**
+
+ Estas salidas permiten identificar el estado fisiológico representado por las señales y facilitan su análisis para aplicaciones prácticas como monitoreo de salud o análisis deportivo.
 
 </P>
 
@@ -71,23 +71,23 @@ Nos enfocaremos en la parte de parámetros.
 </p>
 
 <p align="justify">
-En cuanto a la sección de análisis (Analysis), la técnica empleada es la Transformada Rápida de Fourier (FFT), lo que permite convertir la señal del dominio temporal al dominio de frecuencia. Esto es esencial para identificar las componentes frecuenciales que caracterizan las señales de ECG, como los ritmos cardíacos normales . El parámetro <b>FFT Length</b> está configurado en <code>256</code>, lo cual define la resolución del análisis. Este valor es un equilibrio ideal entre detalle y eficiencia computacional, capturando suficiente información de las frecuencias cardíacas relevantes sin sobrecargar los recursos de procesamiento.
+ En cuanto a la sección de análisis (Analysis), la técnica empleada es la Transformada Rápida de Fourier (FFT), lo que permite convertir la señal del dominio temporal al dominio de frecuencia. Esto es esencial para identificar las componentes frecuenciales que caracterizan las señales de ECG, como los ritmos cardíacos normales . El parámetro <b>FFT Length</b> está configurado en <code>256</code>, lo cual define la resolución del análisis. Este valor es un equilibrio ideal entre detalle y eficiencia computacional, capturando suficiente información de las frecuencias cardíacas relevantes sin sobrecargar los recursos de procesamiento.
 </p>
 
 <p align="justify">
-Para mejorar la interpretación de los resultados, la opción <b>Take log of spectrum</b> está activada, lo que transforma los valores de potencia del espectro a una escala logarítmica. Esto facilita la visualización y análisis de las frecuencias bajas, donde se encuentra la mayor parte de la información útil en una señal de ECG. Asimismo, la opción <b>Overlap FFT frames</b> también está habilitada, lo que permite superponer las ventanas FFT. Esto mejora la continuidad del análisis y asegura que no se pierdan detalles importantes entre segmentos consecutivos de la señal. Además, la opción <b>Improve low frequency resolution</b> está activada, lo que prioriza una mayor resolución en las frecuencias bajas, que son críticas para detectar características relevantes.
+ Para mejorar la interpretación de los resultados, la opción <b>Take log of spectrum</b> está activada, lo que transforma los valores de potencia del espectro a una escala logarítmica. Esto facilita la visualización y análisis de las frecuencias bajas, donde se encuentra la mayor parte de la información útil en una señal de ECG. Asimismo, la opción <b>Overlap FFT frames</b> también está habilitada, lo que permite superponer las ventanas FFT. Esto mejora la continuidad del análisis y asegura que no se pierdan detalles importantes entre segmentos consecutivos de la señal. Además, la opción <b>Improve low frequency resolution</b> está activada, lo que prioriza una mayor resolución en las frecuencias bajas, que son críticas para detectar características relevantes.
 </p>
 
 <p align="justify">
-En conjunto, esta configuración está optimizada para extraer información relevante de señales de ECG con alta precisión. Los parámetros seleccionados aseguran un análisis espectral eficiente, preservando las características esenciales de la señal mientras se mantiene la capacidad de implementar este procesamiento en dispositivos embebidos o sistemas de IoT. Estas características, combinadas con configuraciones específicas como la superposición de ventanas y la resolución mejorada en frecuencias bajas, hacen que esta configuración sea ideal para tareas como la clasificación de ritmos cardíacos, detección de arritmias y monitoreo de estados fisiológicos en tiempo real.
+ En conjunto, esta configuración está optimizada para extraer información relevante de señales de ECG con alta precisión. Los parámetros seleccionados aseguran un análisis espectral eficiente, preservando las características esenciales de la señal mientras se mantiene la capacidad de implementar este procesamiento en dispositivos embebidos o sistemas de IoT. Estas características, combinadas con configuraciones específicas como la superposición de ventanas y la resolución mejorada en frecuencias bajas, hacen que esta configuración sea ideal para tareas como la clasificación de ritmos cardíacos, detección de arritmias y monitoreo de estados fisiológicos en tiempo real.
 </p>
 
 ![ima2](IMAGENES/2.png)
 <p align ="center" style="font-size: 10px; ">Imagen2: Spectral features </p>
 
 <p align="justify">
-Segun la imagen 3 se observa que al extraer las características, se ha formado grupos de tal manera que se han juntado parcialmente por colores, lo cual es conveniente para poder distiguir entre etiquetas.
-Además las principales características son a bajas frecuencias como el Spectral Power 1.37 - 1.76 Hz
+ Segun la imagen 3 se observa que al extraer las características, se ha formado grupos de tal manera que se han juntado parcialmente por colores, lo cual es conveniente para poder distiguir entre etiquetas.
+ Además las principales características son a bajas frecuencias como el Spectral Power 1.37 - 1.76 Hz
 </p>
 
 ![ima3](IMAGENES/3.png)
