@@ -1,5 +1,5 @@
 <p align=center style ="font-size:43px;"> 
-<b> LAB 13: IMPORTACION DE DATA A EDGE IMPULSE </b>
+<b> LAB 13: EXTRACCION DE CARACTERISTICAS Y PROCESAMIENTO EN EDGE IMPULSE </b>
  </p>
 
 En el presente entregable, se describirá la metodología seguida para poder procesar la data que fue subida en el Laboratorio 12. Esta data será procesada por un algoritmo de aprendizaje que se implementa via Edge Impulse, donde podremos configurar ciertos parametros a traves de una intefaz amigable para el usuario. Recordemos que, para este caso, tenemos en nuestro dataset tres categorías de señales, las cuales corresponden a los siguientes estados:
